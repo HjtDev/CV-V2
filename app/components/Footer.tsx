@@ -18,8 +18,13 @@ const Logo = () => (
 );
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const f = t.footer;
+
+  const year =
+    lang === 'fa'
+      ? new Intl.DateTimeFormat('fa-IR-u-ca-persian', { year: 'numeric' }).format(new Date())
+      : String(new Date().getFullYear());
 
   return (
     <footer className="relative border-t border-white/5 py-12 px-6">
@@ -28,7 +33,7 @@ export default function Footer() {
           <div className="w-6 h-6">
             <Logo />
           </div>
-          <span className="label text-on-surface-muted text-[11px]">{f.copy}</span>
+          <span className="label text-on-surface-muted text-[11px]">{f.copy.replace('{year}', String(year))}</span>
         </div>
         <div className="flex items-center gap-4">
           <a

@@ -8,10 +8,11 @@ export const en = {
   hero: {
     badge: "CRAFTING EXCELLENCE",
     heading: "Building websites that work as hard as you do.",
-    cta: "See The Journey",
+    cta: "Explore My Work",
   },
   about: {
     badge: "ABOUT ME",
+    name: "Mohammad Hojjat Nikoobakht",
     heading: "Digital Architect.",
     body: "I'm Mohammad Hojjat Nikoobakht — a full-stack developer who bridges solid backend infrastructure with intuitive frontend experiences. I build bespoke digital solutions that are fast, secure, and built to last.",
     location: "REMOTE // GLOBAL",
@@ -48,6 +49,9 @@ export const en = {
       feat1: "Payments",
       feat2: "Email",
       feat3: "Analytics",
+      feat4: "Webhooks",
+      feat5: "Storage",
+      feat6: "AI / ML",
     },
     scale: {
       badge: "FOUNDATION: GROWTH",
@@ -56,6 +60,7 @@ export const en = {
       body1: "Whether you have 10 visitors or 10,000, your site handles the crowd without breaking a sweat. I build systems that scale with your business.",
       sub2: "Instant Response",
       body2: "Nobody likes waiting. I optimize every layer of your site so it feels snappy and professional for every single user.",
+      responseTimeLabel: "RESPONSE TIME",
     },
   },
   aiEdge: {
@@ -65,6 +70,7 @@ export const en = {
     feat1: "Automated Code Optimization",
     feat2: "Accelerated Development Cycles",
     feat3: "Predictive Architecture Patterns",
+    visualizationLabel: "NEURAL_PROCESS_VISUALIZATION",
   },
   experience: {
     heading: "THE EXPERIENCE",
@@ -116,10 +122,11 @@ export const en = {
   },
   contact: {
     badge: "INITIATE CONTACT",
-    heading: "Let's Build Something.",
+    heading: "Let's Bring Your Dream Web Application to Life.",
     body: "I architect digital ecosystems that bridge technical infrastructure with intuitive user experiences. Ready to define your future digital presence?",
+    role: "Full Stack Developer",
     locationLabel: "LOCATION",
-    locationValue: "REMOTE // GLOBAL",
+    locationValue: "Tehran · Isfahan · Remote",
     statusLabel: "STATUS",
     statusValue: "AVAILABLE FOR VENTURES",
     formHeading: "Send a Message",
@@ -129,7 +136,7 @@ export const en = {
     submit: "Send Message",
   },
   footer: {
-    copy: "© 2024 Mohammad Hojjat Nikoobakht. All rights reserved.",
+    copy: "© {year} Mohammad Hojjat Nikoobakht. All rights reserved.",
     github: "GitHub",
     linkedin: "LinkedIn",
   },

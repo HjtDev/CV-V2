@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import SidebarNav from "./components/SidebarNav";
 import Hero from "./components/Hero";
 import Foundation from "./components/Foundation";
 import AIEdge from "./components/AIEdge";
@@ -12,10 +13,20 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-surface text-on-surface">
       <Navbar />
+      <SidebarNav />
       <Hero />
-      <Foundation />
+
+      {/* High-impact highlights — first things visitors should see */}
+      <Foundation sections={['integrations', 'scale']} showHeader={false} />
       <AIEdge />
-      <Experience />
+      <Experience sections={['visuals']} showHeader={false} />
+
+      {/* Core backend foundations */}
+      <Foundation id="foundations" sections={['security', 'auth', 'database']} showHeader />
+
+      {/* Deeper experience sections */}
+      <Experience id="experience" sections={['custom', 'delight']} showHeader />
+
       <Toolkit />
       <Projects />
       <Contact />
