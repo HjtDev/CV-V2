@@ -1,0 +1,3281 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "AIEdge.tsx",
+      "file_type": "code",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L1",
+      "id": "components_aiedge",
+      "community": 0,
+      "norm_label": "aiedge.tsx"
+    },
+    {
+      "label": "AIEdge()",
+      "file_type": "code",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L8",
+      "id": "components_aiedge_aiedge",
+      "community": 0,
+      "norm_label": "aiedge()"
+    },
+    {
+      "label": "Contact.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L1",
+      "id": "components_contact",
+      "community": 3,
+      "norm_label": "contact.tsx"
+    },
+    {
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L10",
+      "id": "components_contact_contact",
+      "community": 3,
+      "norm_label": "contact()"
+    },
+    {
+      "label": "Experience.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L1",
+      "id": "components_experience",
+      "community": 0,
+      "norm_label": "experience.tsx"
+    },
+    {
+      "label": "ExperienceSection",
+      "file_type": "code",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L7",
+      "id": "components_experience_experiencesection",
+      "community": 0,
+      "norm_label": "experiencesection"
+    },
+    {
+      "label": "ExperienceProps",
+      "file_type": "code",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L8",
+      "id": "components_experience_experienceprops",
+      "community": 0,
+      "norm_label": "experienceprops"
+    },
+    {
+      "label": "ALL",
+      "file_type": "code",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L13",
+      "id": "components_experience_all",
+      "community": 0,
+      "norm_label": "all"
+    },
+    {
+      "label": "Experience()",
+      "file_type": "code",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L15",
+      "id": "components_experience_experience",
+      "community": 0,
+      "norm_label": "experience()"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L1",
+      "id": "components_footer",
+      "community": 3,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "Logo()",
+      "file_type": "code",
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L5",
+      "id": "components_footer_logo",
+      "community": 3,
+      "norm_label": "logo()"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L20",
+      "id": "components_footer_footer",
+      "community": 3,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Foundation.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L1",
+      "id": "components_foundation",
+      "community": 0,
+      "norm_label": "foundation.tsx"
+    },
+    {
+      "label": "FoundationSection",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L7",
+      "id": "components_foundation_foundationsection",
+      "community": 0,
+      "norm_label": "foundationsection"
+    },
+    {
+      "label": "FoundationProps",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L8",
+      "id": "components_foundation_foundationprops",
+      "community": 0,
+      "norm_label": "foundationprops"
+    },
+    {
+      "label": "ALL",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L13",
+      "id": "components_foundation_all",
+      "community": 0,
+      "norm_label": "all"
+    },
+    {
+      "label": "Chip()",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L15",
+      "id": "components_foundation_chip",
+      "community": 0,
+      "norm_label": "chip()"
+    },
+    {
+      "label": "Badge()",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L28",
+      "id": "components_foundation_badge",
+      "community": 0,
+      "norm_label": "badge()"
+    },
+    {
+      "label": "AmbientBlob()",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L41",
+      "id": "components_foundation_ambientblob",
+      "community": 0,
+      "norm_label": "ambientblob()"
+    },
+    {
+      "label": "Foundation()",
+      "file_type": "code",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L54",
+      "id": "components_foundation_foundation",
+      "community": 0,
+      "norm_label": "foundation()"
+    },
+    {
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L1",
+      "id": "components_hero",
+      "community": 6,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L7",
+      "id": "components_hero_hero",
+      "community": 6,
+      "norm_label": "hero()"
+    },
+    {
+      "label": "Navbar.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L1",
+      "id": "components_navbar",
+      "community": 3,
+      "norm_label": "navbar.tsx"
+    },
+    {
+      "label": "Logo()",
+      "file_type": "code",
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L6",
+      "id": "components_navbar_logo",
+      "community": 3,
+      "norm_label": "logo()"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L21",
+      "id": "components_navbar_navbar",
+      "community": 3,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "Projects.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L1",
+      "id": "components_projects",
+      "community": 3,
+      "norm_label": "projects.tsx"
+    },
+    {
+      "label": "Projects()",
+      "file_type": "code",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L9",
+      "id": "components_projects_projects",
+      "community": 3,
+      "norm_label": "projects()"
+    },
+    {
+      "label": "SidebarNav.tsx",
+      "file_type": "code",
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L1",
+      "id": "components_sidebarnav",
+      "community": 3,
+      "norm_label": "sidebarnav.tsx"
+    },
+    {
+      "label": "SECTIONS",
+      "file_type": "code",
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L7",
+      "id": "components_sidebarnav_sections",
+      "community": 3,
+      "norm_label": "sections"
+    },
+    {
+      "label": "SidebarNav()",
+      "file_type": "code",
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L15",
+      "id": "components_sidebarnav_sidebarnav",
+      "community": 3,
+      "norm_label": "sidebarnav()"
+    },
+    {
+      "label": "Toolkit.tsx",
+      "file_type": "code",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L1",
+      "id": "components_toolkit",
+      "community": 0,
+      "norm_label": "toolkit.tsx"
+    },
+    {
+      "label": "SKILL_ICONS",
+      "file_type": "code",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L7",
+      "id": "components_toolkit_skill_icons",
+      "community": 0,
+      "norm_label": "skill_icons"
+    },
+    {
+      "label": "easing",
+      "file_type": "code",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L13",
+      "id": "components_toolkit_easing",
+      "community": 0,
+      "norm_label": "easing"
+    },
+    {
+      "label": "cardVariants",
+      "file_type": "code",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L15",
+      "id": "components_toolkit_cardvariants",
+      "community": 0,
+      "norm_label": "cardvariants"
+    },
+    {
+      "label": "Toolkit()",
+      "file_type": "code",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L23",
+      "id": "components_toolkit_toolkit",
+      "community": 0,
+      "norm_label": "toolkit()"
+    },
+    {
+      "label": "CursorSpotlight.tsx",
+      "file_type": "code",
+      "source_file": "app/components/interactive/CursorSpotlight.tsx",
+      "source_location": "L1",
+      "id": "interactive_cursorspotlight",
+      "community": 3,
+      "norm_label": "cursorspotlight.tsx"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "app/components/interactive/CursorSpotlight.tsx",
+      "source_location": "L10",
+      "id": "interactive_cursorspotlight_props",
+      "community": 3,
+      "norm_label": "props"
+    },
+    {
+      "label": "CursorSpotlight()",
+      "file_type": "code",
+      "source_file": "app/components/interactive/CursorSpotlight.tsx",
+      "source_location": "L15",
+      "id": "interactive_cursorspotlight_cursorspotlight",
+      "community": 3,
+      "norm_label": "cursorspotlight()"
+    },
+    {
+      "label": "Magnetic.tsx",
+      "file_type": "code",
+      "source_file": "app/components/interactive/Magnetic.tsx",
+      "source_location": "L1",
+      "id": "interactive_magnetic",
+      "community": 8,
+      "norm_label": "magnetic.tsx"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "app/components/interactive/Magnetic.tsx",
+      "source_location": "L11",
+      "id": "interactive_magnetic_props",
+      "community": 8,
+      "norm_label": "props"
+    },
+    {
+      "label": "Magnetic()",
+      "file_type": "code",
+      "source_file": "app/components/interactive/Magnetic.tsx",
+      "source_location": "L17",
+      "id": "interactive_magnetic_magnetic",
+      "community": 8,
+      "norm_label": "magnetic()"
+    },
+    {
+      "label": "OrbField.tsx",
+      "file_type": "code",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L1",
+      "id": "interactive_orbfield",
+      "community": 6,
+      "norm_label": "orbfield.tsx"
+    },
+    {
+      "label": "OrbConfig",
+      "file_type": "code",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L11",
+      "id": "interactive_orbfield_orbconfig",
+      "community": 6,
+      "norm_label": "orbconfig"
+    },
+    {
+      "label": "ORBS_HERO",
+      "file_type": "code",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L27",
+      "id": "interactive_orbfield_orbs_hero",
+      "community": 6,
+      "norm_label": "orbs_hero"
+    },
+    {
+      "label": "ORBS_AI",
+      "file_type": "code",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L35",
+      "id": "interactive_orbfield_orbs_ai",
+      "community": 6,
+      "norm_label": "orbs_ai"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L41",
+      "id": "interactive_orbfield_props",
+      "community": 6,
+      "norm_label": "props"
+    },
+    {
+      "label": "OrbField()",
+      "file_type": "code",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L46",
+      "id": "interactive_orbfield_orbfield",
+      "community": 6,
+      "norm_label": "orbfield()"
+    },
+    {
+      "label": "TiltCard.tsx",
+      "file_type": "code",
+      "source_file": "app/components/interactive/TiltCard.tsx",
+      "source_location": "L1",
+      "id": "interactive_tiltcard",
+      "community": 9,
+      "norm_label": "tiltcard.tsx"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "app/components/interactive/TiltCard.tsx",
+      "source_location": "L11",
+      "id": "interactive_tiltcard_props",
+      "community": 9,
+      "norm_label": "props"
+    },
+    {
+      "label": "TiltCard()",
+      "file_type": "code",
+      "source_file": "app/components/interactive/TiltCard.tsx",
+      "source_location": "L19",
+      "id": "interactive_tiltcard_tiltcard",
+      "community": 9,
+      "norm_label": "tiltcard()"
+    },
+    {
+      "label": "Reveal.tsx",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L1",
+      "id": "motion_reveal",
+      "community": 0,
+      "norm_label": "reveal.tsx"
+    },
+    {
+      "label": "RevealProps",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L5",
+      "id": "motion_reveal_revealprops",
+      "community": 0,
+      "norm_label": "revealprops"
+    },
+    {
+      "label": "Reveal()",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L13",
+      "id": "motion_reveal_reveal",
+      "community": 0,
+      "norm_label": "reveal()"
+    },
+    {
+      "label": "StaggerProps",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L37",
+      "id": "motion_reveal_staggerprops",
+      "community": 0,
+      "norm_label": "staggerprops"
+    },
+    {
+      "label": "Stagger()",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L44",
+      "id": "motion_reveal_stagger",
+      "community": 0,
+      "norm_label": "stagger()"
+    },
+    {
+      "label": "easing",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L58",
+      "id": "motion_reveal_easing",
+      "community": 0,
+      "norm_label": "easing"
+    },
+    {
+      "label": "staggerItem",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L60",
+      "id": "motion_reveal_staggeritem",
+      "community": 0,
+      "norm_label": "staggeritem"
+    },
+    {
+      "label": "staggerItemLeft",
+      "file_type": "code",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L70",
+      "id": "motion_reveal_staggeritemleft",
+      "community": 0,
+      "norm_label": "staggeritemleft"
+    },
+    {
+      "label": "LanguageContext.tsx",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L1",
+      "id": "context_languagecontext",
+      "community": 1,
+      "norm_label": "languagecontext.tsx"
+    },
+    {
+      "label": "Lang",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L7",
+      "id": "context_languagecontext_lang",
+      "community": 1,
+      "norm_label": "lang"
+    },
+    {
+      "label": "LanguageContextType",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L9",
+      "id": "context_languagecontext_languagecontexttype",
+      "community": 1,
+      "norm_label": "languagecontexttype"
+    },
+    {
+      "label": "LanguageContext",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L16",
+      "id": "context_languagecontext_languagecontext",
+      "community": 1,
+      "norm_label": "languagecontext"
+    },
+    {
+      "label": "writeLangCookie()",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L25",
+      "id": "context_languagecontext_writelangcookie",
+      "community": 1,
+      "norm_label": "writelangcookie()"
+    },
+    {
+      "label": "applyLangToDOM()",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L29",
+      "id": "context_languagecontext_applylangtodom",
+      "community": 1,
+      "norm_label": "applylangtodom()"
+    },
+    {
+      "label": "FA_TIMEZONES",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L35",
+      "id": "context_languagecontext_fa_timezones",
+      "community": 1,
+      "norm_label": "fa_timezones"
+    },
+    {
+      "label": "LanguageProvider()",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L37",
+      "id": "context_languagecontext_languageprovider",
+      "community": 1,
+      "norm_label": "languageprovider()"
+    },
+    {
+      "label": "useLanguage()",
+      "file_type": "code",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L80",
+      "id": "context_languagecontext_uselanguage",
+      "community": 3,
+      "norm_label": "uselanguage()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L1",
+      "id": "app_layout",
+      "community": 1,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "inter",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L8",
+      "id": "app_layout_inter",
+      "community": 1,
+      "norm_label": "inter"
+    },
+    {
+      "label": "spaceMono",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L13",
+      "id": "app_layout_spacemono",
+      "community": 1,
+      "norm_label": "spacemono"
+    },
+    {
+      "label": "vazirmatn",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L19",
+      "id": "app_layout_vazirmatn",
+      "community": 1,
+      "norm_label": "vazirmatn"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L25",
+      "id": "app_layout_metadata",
+      "community": 1,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "detectLangFromAcceptHeader()",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L31",
+      "id": "app_layout_detectlangfromacceptheader",
+      "community": 1,
+      "norm_label": "detectlangfromacceptheader()"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L49",
+      "id": "app_layout_rootlayout",
+      "community": 1,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/page.tsx",
+      "source_location": "L1",
+      "id": "app_page",
+      "community": 3,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "app/page.tsx",
+      "source_location": "L12",
+      "id": "app_page_home",
+      "community": 3,
+      "norm_label": "home()"
+    },
+    {
+      "label": "en.ts",
+      "file_type": "code",
+      "source_file": "app/translations/en.ts",
+      "source_location": "L1",
+      "id": "translations_en",
+      "community": 1,
+      "norm_label": "en.ts"
+    },
+    {
+      "label": "en",
+      "file_type": "code",
+      "source_file": "app/translations/en.ts",
+      "source_location": "L1",
+      "id": "translations_en_en",
+      "community": 1,
+      "norm_label": "en"
+    },
+    {
+      "label": "Translations",
+      "file_type": "code",
+      "source_file": "app/translations/en.ts",
+      "source_location": "L145",
+      "id": "translations_en_translations",
+      "community": 1,
+      "norm_label": "translations"
+    },
+    {
+      "label": "fa.ts",
+      "file_type": "code",
+      "source_file": "app/translations/fa.ts",
+      "source_location": "L1",
+      "id": "translations_fa",
+      "community": 1,
+      "norm_label": "fa.ts"
+    },
+    {
+      "label": "fa",
+      "file_type": "code",
+      "source_file": "app/translations/fa.ts",
+      "source_location": "L3",
+      "id": "translations_fa_fa",
+      "community": 1,
+      "norm_label": "fa"
+    },
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1",
+      "id": "eslint_config",
+      "community": 10,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "eslintConfig",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L5",
+      "id": "eslint_config_eslintconfig",
+      "community": 10,
+      "norm_label": "eslintconfig"
+    },
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L1",
+      "id": "next_config",
+      "community": 11,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L3",
+      "id": "next_config_nextconfig",
+      "community": 11,
+      "norm_label": "nextconfig"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package",
+      "community": 4,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "package_name",
+      "community": 4,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "package_version",
+      "community": 4,
+      "norm_label": "version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "package_private",
+      "community": 4,
+      "norm_label": "private"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "package_scripts",
+      "community": 4,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "package_scripts_dev",
+      "community": 4,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "package_scripts_build",
+      "community": 4,
+      "norm_label": "build"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "package_scripts_start",
+      "community": 4,
+      "norm_label": "start"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "package_scripts_lint",
+      "community": 4,
+      "norm_label": "lint"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "id": "package_dependencies",
+      "community": 4,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "framer-motion",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "package_dependencies_framer_motion",
+      "community": 4,
+      "norm_label": "framer-motion"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "package_dependencies_next",
+      "community": 4,
+      "norm_label": "next"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "package_dependencies_react",
+      "community": 4,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "package_dependencies_react_dom",
+      "community": 4,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "package_devdependencies",
+      "community": 5,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "package_devdependencies_tailwindcss_postcss",
+      "community": 5,
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "package_devdependencies_types_node",
+      "community": 5,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "id": "package_devdependencies_types_react",
+      "community": 5,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "package_devdependencies_types_react_dom",
+      "community": 5,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "package_devdependencies_eslint",
+      "community": 5,
+      "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-config-next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "package_devdependencies_eslint_config_next",
+      "community": 5,
+      "norm_label": "eslint-config-next"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "package_devdependencies_tailwindcss",
+      "community": 5,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "id": "package_devdependencies_typescript",
+      "community": 5,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config",
+      "community": 12,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config_config",
+      "community": 12,
+      "norm_label": "config"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "id": "tsconfig",
+      "community": 2,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "id": "tsconfig_compileroptions",
+      "community": 2,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "id": "tsconfig_compileroptions_target",
+      "community": 2,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "id": "tsconfig_compileroptions_lib",
+      "community": 2,
+      "norm_label": "lib"
+    },
+    {
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "id": "tsconfig_compileroptions_allowjs",
+      "community": 2,
+      "norm_label": "allowjs"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "id": "tsconfig_compileroptions_skiplibcheck",
+      "community": 2,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "id": "tsconfig_compileroptions_strict",
+      "community": 2,
+      "norm_label": "strict"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "id": "tsconfig_compileroptions_noemit",
+      "community": 2,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "id": "tsconfig_compileroptions_esmoduleinterop",
+      "community": 2,
+      "norm_label": "esmoduleinterop"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "id": "tsconfig_compileroptions_module",
+      "community": 2,
+      "norm_label": "module"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "id": "tsconfig_compileroptions_moduleresolution",
+      "community": 2,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "id": "tsconfig_compileroptions_resolvejsonmodule",
+      "community": 2,
+      "norm_label": "resolvejsonmodule"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "id": "tsconfig_compileroptions_isolatedmodules",
+      "community": 2,
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "id": "tsconfig_compileroptions_jsx",
+      "community": 2,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "id": "tsconfig_compileroptions_incremental",
+      "community": 2,
+      "norm_label": "incremental"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "id": "tsconfig_compileroptions_plugins",
+      "community": 2,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "id": "tsconfig_compileroptions_paths",
+      "community": 2,
+      "norm_label": "paths"
+    },
+    {
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "id": "tsconfig_paths",
+      "community": 2,
+      "norm_label": "@/*"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "id": "tsconfig_include",
+      "community": 2,
+      "norm_label": "include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L33",
+      "id": "tsconfig_exclude",
+      "community": 2,
+      "norm_label": "exclude"
+    },
+    {
+      "label": "Next.js Agent Rules",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_nextjs_agent_rules",
+      "community": 7,
+      "norm_label": "next.js agent rules"
+    },
+    {
+      "label": "Claude Configuration",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_config",
+      "community": 7,
+      "norm_label": "claude configuration"
+    },
+    {
+      "label": "Resume Site Project",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_project",
+      "community": 7,
+      "norm_label": "resume site project"
+    },
+    {
+      "label": "Next.js Framework",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://nextjs.org",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_nextjs",
+      "community": 7,
+      "norm_label": "next.js framework"
+    },
+    {
+      "label": "Vercel Platform",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://vercel.com",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_vercel",
+      "community": 7,
+      "norm_label": "vercel platform"
+    },
+    {
+      "label": "File Icon",
+      "file_type": "image",
+      "source_file": "public/file.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_file_svg",
+      "community": 13,
+      "norm_label": "file icon"
+    },
+    {
+      "label": "Globe Icon",
+      "file_type": "image",
+      "source_file": "public/globe.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_globe_svg",
+      "community": 14,
+      "norm_label": "globe icon"
+    },
+    {
+      "label": "Next.js Logo",
+      "file_type": "image",
+      "source_file": "public/next.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_next_svg",
+      "community": 7,
+      "norm_label": "next.js logo"
+    },
+    {
+      "label": "Profile Image",
+      "file_type": "image",
+      "source_file": "public/profile.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_profile_png",
+      "community": 15,
+      "norm_label": "profile image"
+    },
+    {
+      "label": "Vercel Logo",
+      "file_type": "image",
+      "source_file": "public/vercel.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_vercel_svg",
+      "community": 7,
+      "norm_label": "vercel logo"
+    },
+    {
+      "label": "Window Icon",
+      "file_type": "image",
+      "source_file": "public/window.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_window_svg",
+      "community": 16,
+      "norm_label": "window icon"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_aiedge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "components_aiedge_aiedge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "interactive_orbfield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "interactive_orbfield_orbs_ai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "motion_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "motion_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "motion_reveal_stagger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_aiedge",
+      "target": "motion_reveal_staggeritem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/AIEdge.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_aiedge_aiedge",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "components_contact",
+      "target": "components_contact_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_contact",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_contact",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_contact",
+      "target": "interactive_cursorspotlight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_contact",
+      "target": "motion_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_contact",
+      "target": "motion_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Contact.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "components_contact_contact",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_experience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "components_experience_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "components_experience_experience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "components_experience_experienceprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "components_experience_experiencesection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "motion_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "motion_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "motion_reveal_stagger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_experience",
+      "target": "motion_reveal_staggeritem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Experience.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "components_experience_experience",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "components_footer",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_footer",
+      "target": "components_footer_logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_footer",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_footer",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Footer.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "components_footer_footer",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_foundation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "components_foundation_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "components_foundation_ambientblob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "components_foundation_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "components_foundation_chip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "components_foundation_foundation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "components_foundation_foundationprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "components_foundation_foundationsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "motion_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "motion_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "motion_reveal_stagger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_foundation",
+      "target": "motion_reveal_staggeritem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Foundation.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "components_foundation_foundation",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_hero",
+      "target": "components_hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_hero",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_hero",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_hero",
+      "target": "interactive_orbfield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_hero",
+      "target": "interactive_orbfield_orbs_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Hero.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_hero_hero",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_navbar",
+      "target": "components_navbar_logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "components_navbar",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_navbar",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_navbar",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Navbar.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "components_navbar_navbar",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_projects",
+      "target": "components_projects_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_projects",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_projects",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_projects",
+      "target": "interactive_cursorspotlight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_projects",
+      "target": "interactive_tiltcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_projects",
+      "target": "motion_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_projects",
+      "target": "motion_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Projects.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "components_projects_projects",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_sidebarnav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_sidebarnav",
+      "target": "components_sidebarnav_sections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_sidebarnav",
+      "target": "components_sidebarnav_sidebarnav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_sidebarnav",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_sidebarnav",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/SidebarNav.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "components_sidebarnav_sidebarnav",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "components_toolkit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "components_toolkit_cardvariants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "components_toolkit_easing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "components_toolkit_skill_icons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "components_toolkit_toolkit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "motion_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_toolkit",
+      "target": "motion_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/components/Toolkit.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components_toolkit_toolkit",
+      "target": "context_languagecontext_uselanguage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/CursorSpotlight.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "interactive_cursorspotlight",
+      "target": "interactive_cursorspotlight_cursorspotlight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/CursorSpotlight.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "interactive_cursorspotlight",
+      "target": "interactive_cursorspotlight_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/Magnetic.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "interactive_magnetic",
+      "target": "interactive_magnetic_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/Magnetic.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "interactive_magnetic",
+      "target": "interactive_magnetic_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "interactive_orbfield",
+      "target": "interactive_orbfield_orbconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "interactive_orbfield",
+      "target": "interactive_orbfield_orbfield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "interactive_orbfield",
+      "target": "interactive_orbfield_orbs_ai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "interactive_orbfield",
+      "target": "interactive_orbfield_orbs_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/OrbField.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "interactive_orbfield",
+      "target": "interactive_orbfield_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/TiltCard.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "interactive_tiltcard",
+      "target": "interactive_tiltcard_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/interactive/TiltCard.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "interactive_tiltcard",
+      "target": "interactive_tiltcard_tiltcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "motion_reveal",
+      "target": "motion_reveal_easing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "motion_reveal",
+      "target": "motion_reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "motion_reveal",
+      "target": "motion_reveal_revealprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "motion_reveal",
+      "target": "motion_reveal_stagger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "motion_reveal",
+      "target": "motion_reveal_staggeritem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "motion_reveal",
+      "target": "motion_reveal_staggeritemleft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/motion/Reveal.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "motion_reveal",
+      "target": "motion_reveal_staggerprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "context_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_applylangtodom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_fa_timezones",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_lang",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_languagecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_languagecontexttype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_languageprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_uselanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "context_languagecontext_writelangcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "translations_en",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "translations_en_en",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "translations_en_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "translations_fa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "context_languagecontext",
+      "target": "translations_fa_fa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "context_languagecontext_lang",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "app/context/LanguageContext.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "context_languagecontext_languagecontexttype",
+      "target": "translations_en_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "context_languagecontext_languageprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_detectlangfromacceptheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_inter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_spacemono",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_vazirmatn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "app_layout_rootlayout",
+      "target": "app_layout_detectlangfromacceptheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "app_page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/translations/en.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "translations_en",
+      "target": "translations_en_en",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/translations/en.ts",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "translations_en",
+      "target": "translations_en_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/translations/fa.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "translations_fa",
+      "target": "translations_en",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/translations/fa.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "translations_fa",
+      "target": "translations_en_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/translations/fa.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "translations_fa",
+      "target": "translations_fa_fa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "eslint_config",
+      "target": "eslint_config_eslintconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "next_config",
+      "target": "next_config_nextconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_framer_motion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_config_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "postcss_config",
+      "target": "postcss_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_exclude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_allowjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_esmoduleinterop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_incremental",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_isolatedmodules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_resolvejsonmodule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_strict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions_paths",
+      "target": "tsconfig_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_nextjs_agent_rules",
+      "target": "readme_nextjs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": 1,
+      "weight": 1.0,
+      "source": "claude_config",
+      "target": "agents_nextjs_agent_rules"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 1,
+      "weight": 1.0,
+      "source": "readme_project",
+      "target": "readme_nextjs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": 35,
+      "weight": 1.0,
+      "source": "readme_project",
+      "target": "readme_vercel"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/next.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_next_svg",
+      "target": "readme_nextjs"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "public/vercel.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_vercel_svg",
+      "target": "readme_vercel"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "23cd7ad0f3a99cdf06f40e8fd3acc1412f514e0a"
+}

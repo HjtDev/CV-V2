@@ -105,22 +105,13 @@ export const fa: Translations = {
     ],
   },
   projects: {
-    badge: "نمونه‌کار ۲۰۲۴",
+    badge: "نمونه‌کار",
     heading: "نتیجه کار.",
-    items: [
-      {
-        name: "Neural Ledger Pro",
-        desc: "پلتفرمی هوشمند برای مدیریت آسان و شفاف امور مالی پیچیده.",
-        status: "فعال",
-        tags: ["Next.js", "Django", "PostgreSQL"],
-      },
-      {
-        name: "Echo Stream",
-        desc: "ابزارهای صوتی real-time برای تیم‌های خلاق مدرن.",
-        status: "فعال",
-        tags: ["WebSockets", "React", "Docker"],
-      },
-    ],
+    status: {
+      active:      "فعال",
+      in_progress: "در حال انجام",
+      archived:    "آرشیو",
+    },
   },
   contact: {
     badge: "شروع همکاری",

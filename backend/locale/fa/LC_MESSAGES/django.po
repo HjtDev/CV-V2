@@ -1,0 +1,148 @@
+# Persian (Farsi) translations for portfolio backend
+# Mohammad Hojjat Nikoobakht <m.h.nikoobakht@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: portfolio-backend\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-06 14:05+0000\n"
+"PO-Revision-Date: 2026-06-06 14:02+0000\n"
+"Last-Translator: Mohammad Hojjat Nikoobakht <m.h.nikoobakht@gmail.com>\n"
+"Language-Team: Persian\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: contact/admin.py:16
+msgid "Sender"
+msgstr "فرستنده"
+
+#: contact/admin.py:19 contact/models.py:8 contact/models.py:14
+msgid "Message"
+msgstr "پیام"
+
+#: contact/apps.py:8
+msgid "Contact"
+msgstr "تماس"
+
+#: contact/models.py:6 portfolio/models.py:12
+msgid "Name"
+msgstr "نام"
+
+#: contact/models.py:7
+msgid "Email"
+msgstr "ایمیل"
+
+#: contact/models.py:9
+msgid "Received at"
+msgstr "دریافت شده در"
+
+#: contact/models.py:10
+msgid "Read"
+msgstr "خوانده شده"
+
+#: contact/models.py:15
+msgid "Messages"
+msgstr "پیام‌ها"
+
+#: portfolio/admin.py:15 portfolio/admin.py:32
+msgid "🇬🇧 English"
+msgstr "🇬🇧 انگلیسی"
+
+#: portfolio/admin.py:18 portfolio/admin.py:35
+msgid "🇮🇷 فارسی"
+msgstr "🇮🇷 فارسی"
+
+#: portfolio/admin.py:21
+msgid "⚙️ Settings"
+msgstr "⚙️ تنظیمات"
+
+#: portfolio/apps.py:8
+msgid "Portfolio"
+msgstr "پورتفولیو"
+
+#: portfolio/models.py:7
+msgid "Active"
+msgstr "فعال"
+
+#: portfolio/models.py:8
+msgid "In Progress"
+msgstr "در حال انجام"
+
+#: portfolio/models.py:9
+msgid "Archived"
+msgstr "آرشیو"
+
+#: portfolio/models.py:13
+msgid "Description"
+msgstr "توضیحات"
+
+#: portfolio/models.py:14
+msgid "Live URL"
+msgstr "آدرس وبسایت"
+
+#: portfolio/models.py:15
+msgid "GitHub URL"
+msgstr "آدرس گیت‌هاب"
+
+#: portfolio/models.py:18
+msgid "Name (FA)"
+msgstr "نام (فارسی)"
+
+#: portfolio/models.py:19
+msgid "Description (FA)"
+msgstr "توضیحات (فارسی)"
+
+#: portfolio/models.py:22
+msgid "Tags"
+msgstr "برچسب‌ها"
+
+#: portfolio/models.py:22
+msgid "e.g. [\"Next.js\", \"Django\"]"
+msgstr "مثال: [\"Next.js\", \"Django\"]"
+
+#: portfolio/models.py:23
+msgid "Status"
+msgstr "وضعیت"
+
+#: portfolio/models.py:24
+msgid "Order"
+msgstr "ترتیب"
+
+#: portfolio/models.py:24
+msgid "Lower = shown first"
+msgstr "عدد کمتر = نمایش اول"
+
+#: portfolio/models.py:25
+msgid "Created"
+msgstr "ایجاد شده"
+
+#: portfolio/models.py:26 portfolio/models.py:41
+msgid "Updated"
+msgstr "به‌روز شده"
+
+#: portfolio/models.py:30
+msgid "Project"
+msgstr "پروژه"
+
+#: portfolio/models.py:31
+msgid "Projects"
+msgstr "پروژه‌ها"
+
+#: portfolio/models.py:38
+msgid "Available for work"
+msgstr "آماده همکاری"
+
+#: portfolio/models.py:39
+msgid "Status text"
+msgstr "متن وضعیت"
+
+#: portfolio/models.py:40
+msgid "Status text (FA)"
+msgstr "متن وضعیت (فارسی)"
+
+#: portfolio/models.py:44 portfolio/models.py:45
+msgid "Site Status"
+msgstr "وضعیت سایت"

@@ -6,16 +6,45 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { Reveal } from './motion/Reveal';
 import CursorSpotlight from './interactive/CursorSpotlight';
+import { api } from '../lib/api';
+import type { SiteStatus } from '../lib/types';
 
-export default function Contact() {
-  const { t } = useLanguage();
+type Props = { siteStatus?: SiteStatus | null };
+
+export default function Contact({ siteStatus }: Props) {
+  const { t, lang } = useLanguage();
   const c = t.contact;
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError]         = useState(false);
+  const [loading, setLoading]     = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const statusValue = siteStatus
+    ? (lang === 'fa' ? siteStatus.status_text_fa : siteStatus.status_text)
+    : c.statusValue;
+
+  const isAvailable = siteStatus?.is_available !== false;
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    setLoading(true);
+    const form = e.currentTarget;
+    const data = {
+      name:    (form.elements.namedItem('name')    as HTMLInputElement).value,
+      email:   (form.elements.namedItem('email')   as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    };
+
+    try {
+      await api.post('/api/v1/contact/', data);
+      setSubmitted(true);
+      form.reset();
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 4000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass =
@@ -32,9 +61,10 @@ export default function Contact() {
 
       <div className="relative z-10 max-w-[1280px] mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          {/* Info */}
+
+          {/* Left — info */}
           <Reveal direction="left">
-            {/* Profile */}
+            {/* Profile row */}
             <div className="flex items-center gap-5 mb-10">
               <div className="relative shrink-0">
                 <motion.div
@@ -54,15 +84,21 @@ export default function Contact() {
                     priority
                   />
                 </motion.div>
+                {/* Availability dot — green = available, red = not */}
                 <motion.span
-                  className="absolute -bottom-1 -end-1 w-4 h-4 rounded-full bg-primary border-2 border-surface"
+                  className="absolute -bottom-1 -end-1 w-4 h-4 rounded-full border-2 border-surface"
+                  style={{ background: isAvailable ? '#00ffc2' : '#ff4444' }}
                   animate={{ scale: [1, 1.3, 1] }}
                   transition={{ duration: 1.8, repeat: Infinity }}
                 />
               </div>
               <div>
                 <div className="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full mb-2">
-                  <motion.span className="w-1.5 h-1.5 rounded-full bg-primary" animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1.6, repeat: Infinity }} />
+                  <motion.span
+                    className="w-1.5 h-1.5 rounded-full bg-primary"
+                    animate={{ opacity: [1, 0.3, 1] }}
+                    transition={{ duration: 1.6, repeat: Infinity }}
+                  />
                   <span className="label text-primary text-[11px]">{c.badge}</span>
                 </div>
                 <p className="text-on-surface font-semibold leading-tight">{t.about.name}</p>
@@ -75,8 +111,8 @@ export default function Contact() {
 
             <div className="space-y-4">
               {[
-                { label: c.locationLabel, value: c.locationValue, mono: true },
-                { label: c.statusLabel, value: c.statusValue, pulse: true },
+                { label: c.locationLabel, value: c.locationValue, pulse: false },
+                { label: c.statusLabel,   value: statusValue,     pulse: true  },
               ].map(({ label, value, pulse }, i) => (
                 <motion.div
                   key={label}
@@ -91,7 +127,8 @@ export default function Contact() {
                   <div className="flex items-center gap-2">
                     {pulse && (
                       <motion.span
-                        className="w-2 h-2 rounded-full bg-primary"
+                        className="w-2 h-2 rounded-full"
+                        style={{ background: isAvailable ? '#00ffc2' : '#ff4444' }}
                         animate={{ scale: [1, 1.4, 1] }}
                         transition={{ duration: 1.4, repeat: Infinity }}
                       />
@@ -103,8 +140,8 @@ export default function Contact() {
 
               <div className="flex gap-3 pt-2">
                 {[
-                  { icon: '🐙', label: 'GitHub', href: 'https://github.com' },
-                  { icon: '💼', label: 'LinkedIn', href: 'https://linkedin.com' },
+                  { icon: '🐙', label: 'GitHub',   href: 'https://github.com/HjtDev' },
+                  { icon: '💼', label: 'LinkedIn',  href: 'https://www.linkedin.com/in/mohammad-hojjat-nikoobakht-807aaa301?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
                 ].map(({ icon, label, href }) => (
                   <motion.a
                     key={label}
@@ -122,7 +159,7 @@ export default function Contact() {
             </div>
           </Reveal>
 
-          {/* Form */}
+          {/* Right — form */}
           <Reveal direction="right">
             <motion.div
               className="glass-strong p-8 rounded-2xl"
@@ -133,63 +170,94 @@ export default function Contact() {
               <p className="label text-on-surface-muted text-[11px] mb-6 relative z-10">{c.formHeading}</p>
 
               <div className="relative z-10">
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center py-12 gap-4">
-                  <motion.div
-                    className="w-14 h-14 rounded-full flex items-center justify-center text-2xl"
-                    style={{ background: 'rgba(0,255,194,0.1)' }}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1, boxShadow: ['0 0 0px rgba(0,255,194,0)', '0 0 32px rgba(0,255,194,0.3)', '0 0 0px rgba(0,255,194,0)'] }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                  >
-                    ✓
-                  </motion.div>
-                  <motion.p
-                    className="label text-primary"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                  >
-                    MESSAGE_SENT
-                  </motion.p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {[
-                    { type: 'text', placeholder: c.namePlaceholder },
-                    { type: 'email', placeholder: c.emailPlaceholder },
-                  ].map(({ type, placeholder }) => (
+                {submitted ? (
+                  <div className="flex flex-col items-center justify-center py-12 gap-4">
+                    <motion.div
+                      className="w-14 h-14 rounded-full flex items-center justify-center text-2xl"
+                      style={{ background: 'rgba(0,255,194,0.1)' }}
+                      initial={{ scale: 0 }}
+                      animate={{
+                        scale: 1,
+                        boxShadow: ['0 0 0px rgba(0,255,194,0)', '0 0 32px rgba(0,255,194,0.3)', '0 0 0px rgba(0,255,194,0)'],
+                      }}
+                      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    >
+                      ✓
+                    </motion.div>
+                    <motion.p
+                      className="label text-primary"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      MESSAGE_SENT
+                    </motion.p>
+                  </div>
+                ) : error ? (
+                  <div className="flex flex-col items-center justify-center py-12 gap-4">
+                    <motion.div
+                      className="w-14 h-14 rounded-full flex items-center justify-center text-2xl"
+                      style={{ background: 'rgba(255,68,68,0.1)' }}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    >
+                      ✕
+                    </motion.div>
+                    <motion.p
+                      className="label text-[11px] text-on-surface-muted"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      {lang === 'fa' ? 'خطا در ارسال. لطفاً دوباره تلاش کنید.' : 'Send failed. Please try again.'}
+                    </motion.p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <motion.input
-                      key={placeholder}
-                      type={type}
+                      name="name"
+                      type="text"
                       required
-                      placeholder={placeholder}
+                      placeholder={c.namePlaceholder}
                       className={inputClass}
                       whileFocus={{ borderColor: 'rgba(0,255,194,0.4)', boxShadow: '0 0 0 1px rgba(0,255,194,0.15)' }}
                     />
-                  ))}
-                  <motion.textarea
-                    required
-                    rows={5}
-                    placeholder={c.messagePlaceholder}
-                    className={`${inputClass} resize-none`}
-                    whileFocus={{ borderColor: 'rgba(0,255,194,0.4)', boxShadow: '0 0 0 1px rgba(0,255,194,0.15)' }}
-                  />
-                  <motion.button
-                    type="submit"
-                    className="w-full py-4 rounded-xl label text-sm font-semibold text-surface"
-                    style={{ background: 'linear-gradient(135deg, #00ffc2, #00e1ab)' }}
-                    whileHover={{ scale: 1.02, boxShadow: '0 0 24px rgba(0,255,194,0.35)' }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 22 }}
-                  >
-                    {c.submit}
-                  </motion.button>
-                </form>
-              )}
+                    <motion.input
+                      name="email"
+                      type="email"
+                      required
+                      placeholder={c.emailPlaceholder}
+                      className={inputClass}
+                      whileFocus={{ borderColor: 'rgba(0,255,194,0.4)', boxShadow: '0 0 0 1px rgba(0,255,194,0.15)' }}
+                    />
+                    <motion.textarea
+                      name="message"
+                      required
+                      rows={5}
+                      placeholder={c.messagePlaceholder}
+                      className={`${inputClass} resize-none`}
+                      whileFocus={{ borderColor: 'rgba(0,255,194,0.4)', boxShadow: '0 0 0 1px rgba(0,255,194,0.15)' }}
+                    />
+                    <motion.button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full py-4 rounded-xl label text-sm font-semibold text-surface disabled:opacity-60"
+                      style={{ background: 'linear-gradient(135deg, #00ffc2, #00e1ab)' }}
+                      whileHover={loading ? {} : { scale: 1.02, boxShadow: '0 0 24px rgba(0,255,194,0.35)' }}
+                      whileTap={loading ? {} : { scale: 0.98 }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+                    >
+                      {loading
+                        ? (lang === 'fa' ? 'در حال ارسال...' : 'Sending...')
+                        : c.submit}
+                    </motion.button>
+                  </form>
+                )}
               </div>
             </motion.div>
           </Reveal>
+
         </div>
       </div>
     </section>

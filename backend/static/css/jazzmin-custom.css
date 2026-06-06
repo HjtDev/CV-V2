@@ -1,0 +1,16 @@
+/*
+ * Jazzmin custom stylesheet
+ *
+ * The admin is always LTR — even in Farsi mode.
+ * Sidebar stays on the left, layout is untouched.
+ *
+ * The only RTL styling applied is inside .ltr-admin fieldsets,
+ * which makes Farsi content fields display right-to-left correctly
+ * without affecting anything else on the page.
+ */
+
+/* ── Farsi content fieldsets (class="ltr-admin" set in admin.py) ── */
+
+* {
+	direction: ltr;
+}

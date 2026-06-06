@@ -103,22 +103,13 @@ export const en = {
     ],
   },
   projects: {
-    badge: "SELECTED_WORK_2024",
+    badge: "SELECTED_WORK",
     heading: "The Proof.",
-    items: [
-      {
-        name: "Neural Ledger Pro",
-        desc: "A smart platform for managing complex finances with clarity and ease.",
-        status: "Live",
-        tags: ["Next.js", "Django", "PostgreSQL"],
-      },
-      {
-        name: "Echo Stream",
-        desc: "Smooth real-time audio tools built for modern creative teams.",
-        status: "Live",
-        tags: ["WebSockets", "React", "Docker"],
-      },
-    ],
+    status: {
+      active:      "LIVE",
+      in_progress: "IN PROGRESS",
+      archived:    "ARCHIVED",
+    },
   },
   contact: {
     badge: "INITIATE CONTACT",

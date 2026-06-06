@@ -8,8 +8,14 @@ import Toolkit from "./components/Toolkit";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { getProjects, getSiteStatus } from "./lib/server-api";
 
-export default function Home() {
+export default async function Home() {
+  const [projects, siteStatus] = await Promise.all([
+    getProjects(),
+    getSiteStatus(),
+  ]);
+
   return (
     <main className="min-h-screen bg-surface text-on-surface">
       <Navbar />
@@ -28,8 +34,8 @@ export default function Home() {
       <Experience id="experience" sections={['custom', 'delight']} showHeader />
 
       <Toolkit />
-      <Projects />
-      <Contact />
+      <Projects projects={projects} />
+      <Contact siteStatus={siteStatus} />
       <Footer />
     </main>
   );
