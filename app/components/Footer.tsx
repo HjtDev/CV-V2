@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/HjtDev"
             target="_blank"
             rel="noopener noreferrer"
             className="label text-on-surface-muted text-[11px] hover:text-primary transition-colors"
@@ -46,7 +46,7 @@ export default function Footer() {
           </a>
           <span className="text-outline/40">·</span>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/mohammad-hojjat-nikoobakht-807aaa301?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             target="_blank"
             rel="noopener noreferrer"
             className="label text-on-surface-muted text-[11px] hover:text-primary transition-colors"

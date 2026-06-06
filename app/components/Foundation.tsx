@@ -225,7 +225,7 @@ export default function Foundation({ sections = ALL, showHeader = true, id }: Fo
                     { icon: '🤖', label: f.integrations.feat6 },
                   ].map(({ icon, label }) => (
                     <motion.div
-                      key={label}
+                      key={icon}
                       variants={staggerItem}
                       whileHover={{ y: -5, scale: 1.08, borderColor: 'rgba(0,255,194,0.25)' }}
                       transition={{ type: 'spring', stiffness: 400, damping: 22 }}
