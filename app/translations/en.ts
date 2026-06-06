@@ -1,0 +1,138 @@
+export const en = {
+  nav: {
+    foundations: "Foundations",
+    experience: "Experience",
+    work: "Work",
+    contact: "Let's Talk",
+  },
+  hero: {
+    badge: "CRAFTING EXCELLENCE",
+    heading: "Building websites that work as hard as you do.",
+    cta: "See The Journey",
+  },
+  about: {
+    badge: "ABOUT ME",
+    heading: "Digital Architect.",
+    body: "I'm Mohammad Hojjat Nikoobakht — a full-stack developer who bridges solid backend infrastructure with intuitive frontend experiences. I build bespoke digital solutions that are fast, secure, and built to last.",
+    location: "REMOTE // GLOBAL",
+    status: "AVAILABLE FOR VENTURES",
+  },
+  foundations: {
+    heading: "THE FOUNDATION",
+    sub: "MAKING IT WORK",
+    security: {
+      badge: "FOUNDATION: SAFETY",
+      heading: "Keeping Your Data Safe.",
+      body: "Your business depends on trust. I build invisible walls that keep intruders out, ensuring your customers' information stays exactly where it belongs — secure with you.",
+      feat1: "24/7 Threat Monitoring",
+      feat2: "Secure Access Guaranteed",
+    },
+    auth: {
+      badge: "FOUNDATION: ACCESS",
+      heading: "Gated Access Only.",
+      body: "I create digital keys for your users that are impossible to lose but easy to use. Simple sign-ins that keep your private business areas private.",
+      feat1: "OAuth & Passkeys",
+      feat2: "Role-Based Control",
+    },
+    database: {
+      badge: "FOUNDATION: STORAGE",
+      heading: "Organized Vaults.",
+      body: "Imagine your data perfectly filed and always within reach. I design storage systems that are tidy, efficient, and ready to serve your business needs instantly.",
+      feat1: "100% Data Sync",
+      feat2: "Optimized Queries",
+    },
+    integrations: {
+      badge: "FOUNDATION: CONNECTION",
+      heading: "The Connected Business.",
+      body: "I build the pipes that connect your website to the tools you already love — from payment gateways to email services — so everything works in harmony.",
+      feat1: "Payments",
+      feat2: "Email",
+      feat3: "Analytics",
+    },
+    scale: {
+      badge: "FOUNDATION: GROWTH",
+      heading: "Lightning Fast Loading.",
+      sub1: "Built to Grow",
+      body1: "Whether you have 10 visitors or 10,000, your site handles the crowd without breaking a sweat. I build systems that scale with your business.",
+      sub2: "Instant Response",
+      body2: "Nobody likes waiting. I optimize every layer of your site so it feels snappy and professional for every single user.",
+    },
+  },
+  aiEdge: {
+    badge: "FUTURE-PROOF: AI",
+    heading: "The Intelligence Pulse.",
+    body: "I leverage advanced AI to supercharge the development process — from optimizing complex algorithms to rapid prototyping — delivering cleaner code and more robust features in half the time.",
+    feat1: "Automated Code Optimization",
+    feat2: "Accelerated Development Cycles",
+    feat3: "Predictive Architecture Patterns",
+  },
+  experience: {
+    heading: "THE EXPERIENCE",
+    sub: "MAKING IT LOOK BEAUTIFUL",
+    visuals: {
+      badge: "EXPERIENCE: VISUALS",
+      heading: "Beautiful & Attractive.",
+      body: "First impressions are everything. I create stunning visual experiences that capture your brand's essence and turn visitors into loyal customers from the very first click.",
+    },
+    custom: {
+      badge: "EXPERIENCE: CUSTOM",
+      heading: "Built to Your Spec.",
+      body: "Your business is unique. I don't use cookie-cutter templates. Every button, page, and feature is crafted from scratch to match your specific vision and goals.",
+      feat1: "Tailor Made",
+      feat2: "Fully Flexible",
+    },
+    delight: {
+      badge: "EXPERIENCE: DELIGHT",
+      heading: "Small Moments of Joy.",
+      body: "I add subtle animations and micro-interactions that make your website feel effortless and alive. It's the little details that create a lasting impression.",
+    },
+  },
+  toolkit: {
+    badge: "TECHNICAL_STACK",
+    heading: "The Toolkit.",
+    skills: [
+      "HTML", "CSS", "Tailwind", "Docker",
+      "Compose", "Django", "Next.js", "Git",
+      "GitHub", "CI/CD",
+    ],
+  },
+  projects: {
+    badge: "SELECTED_WORK_2024",
+    heading: "The Proof.",
+    items: [
+      {
+        name: "Neural Ledger Pro",
+        desc: "A smart platform for managing complex finances with clarity and ease.",
+        status: "Live",
+        tags: ["Next.js", "Django", "PostgreSQL"],
+      },
+      {
+        name: "Echo Stream",
+        desc: "Smooth real-time audio tools built for modern creative teams.",
+        status: "Live",
+        tags: ["WebSockets", "React", "Docker"],
+      },
+    ],
+  },
+  contact: {
+    badge: "INITIATE CONTACT",
+    heading: "Let's Build Something.",
+    body: "I architect digital ecosystems that bridge technical infrastructure with intuitive user experiences. Ready to define your future digital presence?",
+    locationLabel: "LOCATION",
+    locationValue: "REMOTE // GLOBAL",
+    statusLabel: "STATUS",
+    statusValue: "AVAILABLE FOR VENTURES",
+    formHeading: "Send a Message",
+    namePlaceholder: "Your Name",
+    emailPlaceholder: "Your Email",
+    messagePlaceholder: "Your Message",
+    submit: "Send Message",
+  },
+  footer: {
+    copy: "© 2024 Mohammad Hojjat Nikoobakht. All rights reserved.",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+  },
+};
+
+export type Translations = typeof en;

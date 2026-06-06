@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+@theme {
+  --color-primary: #00ffc2;
+  --color-primary-dim: #00e1ab;
+  --color-secondary: #bd00ff;
+  --color-tertiary: #ff7a00;
+  --color-surface: #131313;
+  --color-surface-low: #1c1b1b;
+  --color-surface-mid: #201f1f;
+  --color-surface-high: #2a2a2a;
+  --color-surface-highest: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-muted: #83958c;
+  --color-outline: #3a4a43;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #131313;
+    color: #e5e2e1;
+  }
+
+  html[lang="fa"] body {
+    font-family: var(--font-vazirmatn), 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: rgba(0, 255, 194, 0.2);
+    color: #00ffc2;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 0.75rem;
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+  }
+
+  .glow-green {
+    box-shadow: 0 0 24px rgba(0, 255, 194, 0.2), 0 0 48px rgba(0, 255, 194, 0.08);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 24px rgba(189, 0, 255, 0.2), 0 0 48px rgba(189, 0, 255, 0.08);
+  }
+
+  .label {
+    font-family: var(--font-space-mono), monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  html[lang="fa"] .label {
+    font-family: var(--font-vazirmatn), 'Segoe UI', Tahoma, sans-serif;
+    letter-spacing: 0;
+  }
+
+  .section-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+}
