@@ -3,11 +3,24 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { Reveal } from './motion/Reveal';
+import {
+  SiHtml5, SiCss, SiTailwindcss, SiDocker,
+  SiDjango, SiNextdotjs, SiGit, SiGithub, SiGithubactions,
+} from 'react-icons/si';
+import { FaLayerGroup } from 'react-icons/fa';
+import type { IconType } from 'react-icons';
 
-const SKILL_ICONS: Record<string, string> = {
-  'HTML': '🌐', 'CSS': '🎨', 'Tailwind': '💨', 'Docker': '🐳',
-  'Compose': '🧩', 'Django': '🐍', 'Next.js': '▲', 'Git': '📌',
-  'GitHub': '🐙', 'CI/CD': '🔄',
+const SKILL_ICONS: Record<string, { icon: IconType; color: string }> = {
+  'HTML':    { icon: SiHtml5,         color: '#E34F26' },
+  'CSS':     { icon: SiCss,           color: '#1572B6' },
+  'Tailwind':{ icon: SiTailwindcss,   color: '#06B6D4' },
+  'Docker':  { icon: SiDocker,        color: '#2496ED' },
+  'Compose': { icon: FaLayerGroup,    color: '#2496ED' },
+  'Django':  { icon: SiDjango,        color: '#44B78B' },
+  'Next.js': { icon: SiNextdotjs,     color: '#ffffff' },
+  'Git':     { icon: SiGit,           color: '#F05032' },
+  'GitHub':  { icon: SiGithub,        color: '#ffffff' },
+  'CI/CD':   { icon: SiGithubactions, color: '#2088FF' },
 };
 
 const easing = [0.25, 0.46, 0.45, 0.94] as [number, number, number, number];
@@ -65,11 +78,16 @@ export default function Toolkit() {
               style={{ border: '1px solid rgba(255,255,255,0.07)' }}
             >
               <motion.span
-                className="text-3xl"
+                className="text-3xl flex items-center justify-center"
                 whileHover={{ scale: 1.2, rotate: [0, -8, 8, 0] }}
                 transition={{ duration: 0.35 }}
               >
-                {SKILL_ICONS[skill] ?? '⚙️'}
+                {(() => {
+                  const entry = SKILL_ICONS[skill];
+                  if (!entry) return '⚙️';
+                  const Icon = entry.icon;
+                  return <Icon style={{ color: entry.color }} size={30} />;
+                })()}
               </motion.span>
               <span className="label text-on-surface-muted text-[11px] group-hover:text-primary transition-colors">
                 {skill}

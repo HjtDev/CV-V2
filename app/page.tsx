@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Foundation from "./components/Foundation";
 import AIEdge from "./components/AIEdge";
 import Experience from "./components/Experience";
+import Support from "./components/Support";
 import Toolkit from "./components/Toolkit";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -23,7 +24,7 @@ export default async function Home() {
       <Hero />
 
       {/* High-impact highlights — first things visitors should see */}
-      <Foundation sections={['integrations', 'scale']} showHeader={false} />
+      <Foundation id="work" sections={['integrations', 'scale']} showHeader={false} />
       <AIEdge />
       <Experience sections={['visuals']} showHeader={false} />
 
@@ -33,6 +34,7 @@ export default async function Home() {
       {/* Deeper experience sections */}
       <Experience id="experience" sections={['custom', 'delight']} showHeader />
 
+      <Support />
       <Toolkit />
       <Projects projects={projects} />
       <Contact siteStatus={siteStatus} />

@@ -121,11 +121,11 @@ export default function Experience({ sections = ALL, showHeader = true, id }: Ex
                 {[
                   { icon: '✂️', label: exp.custom.feat1 },
                   { icon: '🔧', label: exp.custom.feat2 },
-                  { icon: '📐', label: 'Pixel Perfect' },
-                  { icon: '🎯', label: 'Goal-Driven' },
+                  { icon: '📐', label: exp.custom.feat3 },
+                  { icon: '🎯', label: exp.custom.feat4 },
                 ].map(({ icon, label }) => (
                   <motion.div
-                    key={label}
+                    key={icon}
                     variants={staggerItem}
                     whileHover={{ y: -5, scale: 1.05, borderColor: 'rgba(189,0,255,0.2)' }}
                     transition={{ type: 'spring', stiffness: 400, damping: 22 }}

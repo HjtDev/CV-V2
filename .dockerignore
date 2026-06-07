@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env
+.env.local
+.env.*
+!.env.example
+backend/
+graphify-out/
+.git/
+.gitignore
+*.md
+!README.md

@@ -74,7 +74,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.38, ease }}
         >
           <motion.button
-            onClick={() => scrollTo('foundations')}
+            onClick={() => scrollTo('work')}
             className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-lg border border-primary/50 text-primary label hover:bg-primary/10 transition-colors duration-200 glow-green"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}

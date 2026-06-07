@@ -172,7 +172,7 @@ export default function Foundation({ sections = ALL, showHeader = true, id }: Fo
             </Reveal>
 
             <Reveal direction="right">
-              <div className="glass-strong p-6 rounded-2xl font-mono text-sm">
+              <div className="glass-strong p-6 rounded-2xl font-mono text-sm" dir="ltr">
                 <div className="flex items-center gap-2 mb-4 pb-4 border-b border-white/5">
                   <span className="w-3 h-3 rounded-full bg-red-500/70" />
                   <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
