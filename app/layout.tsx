@@ -1,25 +1,35 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Mono, Vazirmatn } from "next/font/google";
+import localFont from "next/font/local";
 import { cookies, headers } from "next/headers";
 import "./globals.css";
 import { LanguageProvider } from "./context/LanguageContext";
 import type { Lang } from "./context/LanguageContext";
+import { Preloader } from "./components/Preloader";
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: "./fonts/inter-latin.woff2",
+  weight: "100 900",
+  style: "normal",
   variable: "--font-inter",
+  display: "swap",
 });
 
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  weight: ["400", "700"],
+const spaceMono = localFont({
+  src: [
+    { path: "./fonts/space-mono-400-latin.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/space-mono-700-latin.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-space-mono",
+  display: "swap",
 });
 
-const vazirmatn = Vazirmatn({
-  subsets: ["arabic"],
+// Vazirmatn is a variable font — single file covers weights 400–800
+const vazirmatn = localFont({
+  src: "./fonts/vazirmatn-arabic.woff2",
+  weight: "400 800",
+  style: "normal",
   variable: "--font-vazirmatn",
-  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -27,43 +37,63 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
+  // Bilingual title — both scripts appear in search results and browser tabs
   title: {
-    default: "Mohammad Hojjat Nikoobakht — Full Stack Developer",
-    template: "%s | Mohammad Hojjat Nikoobakht",
+    default: "Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت — Full Stack Developer",
+    template: "%s | Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت",
   },
 
+  // English first (primary indexing language), Farsi block after the separator
   description:
     "Full-stack developer building secure, fast, and beautifully crafted web applications. " +
     "Specialising in Django, Next.js, and TypeScript. Available for remote work worldwide. " +
-    "محمد حجت نیکوبخت — توسعه‌دهنده فول‌استک",
+    "— " +
+    "محمدحجت نیکوبخت — توسعه‌دهنده فول‌استک متخصص در ساخت اپلیکیشن‌های وب امن، سریع و زیبا. " +
+    "متخصص در Django، Next.js و TypeScript. آماده همکاری از راه دور در سراسر جهان.",
 
   keywords: [
+    // ── English ──────────────────────────────────────────────────────────────
     "full stack developer",
     "web developer",
     "Django developer",
     "Next.js developer",
-    "TypeScript",
-    "React",
-    "Python",
+    "TypeScript developer",
+    "React developer",
+    "Python developer",
+    "backend developer",
+    "frontend developer",
     "PostgreSQL",
     "Redis",
     "Docker",
+    "REST API",
     "remote developer",
     "freelance developer",
     "Mohammad Hojjat Nikoobakht",
+    // ── Farsi ────────────────────────────────────────────────────────────────
+    "محمدحجت نیکوبخت",
     "محمد حجت نیکوبخت",
     "توسعه‌دهنده فول‌استک",
+    "توسعه‌دهنده وب",
+    "برنامه‌نویس پایتون",
+    "برنامه‌نویس جنگو",
+    "برنامه‌نویس ری‌اکت",
+    "برنامه‌نویس تایپ‌اسکریپت",
+    "برنامه‌نویس نکست جی‌اس",
     "طراح وب",
+    "توسعه‌دهنده بک‌اند",
+    "توسعه‌دهنده فرانت‌اند",
+    "توسعه‌دهنده ریموت",
+    "فریلنسر",
+    "برنامه‌نویس فریلنسر",
+    "ساخت اپلیکیشن وب",
   ],
 
   authors: [
-    {
-      name: "Mohammad Hojjat Nikoobakht",
-      url: "https://mhnikoobakht.ir",
-    },
+    { name: "Mohammad Hojjat Nikoobakht", url: SITE_URL },
+    { name: "محمدحجت نیکوبخت",            url: SITE_URL },
   ],
-  creator: "Mohammad Hojjat Nikoobakht",
-  publisher: "Mohammad Hojjat Nikoobakht",
+  creator: "Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت",
+  publisher: "Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت",
 
   // ── Open Graph ────────────────────────────────────────────────────────────
   openGraph: {
@@ -71,16 +101,17 @@ export const metadata: Metadata = {
     locale: "en_US",
     alternateLocale: ["fa_IR"],
     url: "/",
-    siteName: "Mohammad Hojjat Nikoobakht",
-    title: "Mohammad Hojjat Nikoobakht — Full Stack Developer",
+    siteName: "Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت",
+    title: "Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت — Full Stack Developer",
     description:
-      "Full-stack developer building secure, fast, and beautifully crafted web applications. Django · Next.js · TypeScript.",
+      "Full-stack developer building secure, fast, and beautifully crafted web applications. Django · Next.js · TypeScript. " +
+      "— توسعه‌دهنده فول‌استک متخصص در Django، Next.js و TypeScript.",
     images: [
       {
         url: "/profile.png",
         width: 800,
         height: 800,
-        alt: "Mohammad Hojjat Nikoobakht — Full Stack Developer",
+        alt: "Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت — Full Stack Developer",
         type: "image/png",
       },
     ],
@@ -89,9 +120,10 @@ export const metadata: Metadata = {
   // ── Twitter / X ───────────────────────────────────────────────────────────
   twitter: {
     card: "summary",
-    title: "Mohammad Hojjat Nikoobakht — Full Stack Developer",
+    title: "Mohammad Hojjat Nikoobakht | محمدحجت نیکوبخت — Full Stack Developer",
     description:
-      "Full-stack developer building secure, fast, and beautifully crafted web applications.",
+      "Full-stack developer · Django · Next.js · TypeScript — " +
+      "توسعه‌دهنده فول‌استک · جنگو · نکست جی‌اس · تایپ‌اسکریپت",
     images: ["/profile.png"],
   },
 
@@ -117,9 +149,16 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
 
-  // ── Canonical ─────────────────────────────────────────────────────────────
+  // ── Canonical + hreflang ─────────────────────────────────────────────────
+  // Single URL serves both languages (client-side switch), so both locales
+  // point to the same canonical. x-default signals the language-agnostic root.
   alternates: {
     canonical: "/",
+    languages: {
+      "en":        SITE_URL,
+      "fa":        SITE_URL,
+      "x-default": SITE_URL,
+    },
   },
 
   category: "technology",
@@ -169,6 +208,7 @@ export default async function RootLayout({
       className={`${inter.variable} ${spaceMono.variable} ${vazirmatn.variable} antialiased`}
     >
       <body>
+        <Preloader />
         <LanguageProvider initialLang={initialLang}>{children}</LanguageProvider>
       </body>
     </html>

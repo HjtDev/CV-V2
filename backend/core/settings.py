@@ -7,17 +7,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-this-in-production')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
-CSRF_TRUSTED_ORIGINS = config(
+ALLOWED_HOSTS = [h for h in config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',') if h]
+CSRF_TRUSTED_ORIGINS = [o for o in config(
     'CSRF_TRUSTED_ORIGINS',
     default='http://localhost:3000,http://127.0.0.1:3000'
-).split(',')
+).split(',') if o]
 
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
     SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE', default=True, cast=bool)
     CSRF_COOKIE_SECURE = config('CSRF_COOKIE_SECURE', default=True, cast=bool)
+else:
+    # Unconditionally disable HTTPS forcing in dev — env files cannot override this
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -71,15 +76,31 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # ---------------------------------------------------------------------------
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config(
-            'DATABASE_URL',
-            default='postgresql://portfolio_user:portfolio_password@localhost:5432/portfolio_db'
-        ),
-        conn_max_age=600,
-    )
-}
+# When POSTGRES_HOST is set (Docker), read credentials directly from os.environ —
+# bypasses python-decouple and avoids any additional parsing layer on top of what
+# Docker Compose already resolved. Falls back to DATABASE_URL for local dev.
+if os.environ.get('POSTGRES_HOST'):
+    DATABASES = {
+        'default': {
+            'ENGINE':       'django.db.backends.postgresql',
+            'NAME':         os.environ.get('POSTGRES_DB',       'portfolio_db'),
+            'USER':         os.environ.get('POSTGRES_USER',     'portfolio_user'),
+            'PASSWORD':     os.environ.get('POSTGRES_PASSWORD', ''),
+            'HOST':         os.environ.get('POSTGRES_HOST',     'postgres'),
+            'PORT':         os.environ.get('POSTGRES_PORT',     '5432'),
+            'CONN_MAX_AGE': 600,
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=config(
+                'DATABASE_URL',
+                default='postgresql://portfolio_user:portfolio_password@localhost:5432/portfolio_db'
+            ),
+            conn_max_age=600,
+        )
+    }
 
 # ---------------------------------------------------------------------------
 # Cache (Redis)
@@ -140,7 +161,7 @@ STORAGES = {
         'BACKEND': 'django.core.files.storage.FileSystemStorage',
     },
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
     },
 }
 
@@ -183,10 +204,10 @@ SIMPLE_JWT = {
 # CORS
 # ---------------------------------------------------------------------------
 
-CORS_ALLOWED_ORIGINS = config(
+CORS_ALLOWED_ORIGINS = [o for o in config(
     'CORS_ALLOWED_ORIGINS',
     default='http://localhost:3000,http://127.0.0.1:3000'
-).split(',')
+).split(',') if o]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
     'accept',

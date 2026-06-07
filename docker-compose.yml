@@ -1,3 +1,7 @@
+# Development — hot reload, bind-mounted source, Django runserver + Next.js dev
+# Usage: docker compose up --build
+#        cp .env.example .env   (first time)
+
 services:
 
   # ── PostgreSQL ──────────────────────────────────────────────────────────────
@@ -17,54 +21,55 @@ services:
   redis:
     image: redis:7-alpine
     restart: unless-stopped
-    command: redis-server --appendonly yes --maxmemory 128mb --maxmemory-policy allkeys-lru
+    command: redis-server --appendonly yes
     volumes:
       - redis_data:/data
     networks:
       - app_network
 
-  # ── Django Backend ──────────────────────────────────────────────────────────
+  # ── Django Backend (runserver) ───────────────────────────────────────────────
   backend:
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     restart: unless-stopped
+    volumes:
+      - ./backend:/app                 # bind mount — changes reflect instantly
     environment:
-      SECRET_KEY: ${SECRET_KEY:-django-insecure-change-this-before-production}
-      DEBUG: ${DEBUG:-False}
-      ALLOWED_HOSTS: backend,localhost,127.0.0.1,${DOMAIN:-}
-      DATABASE_URL: postgresql://${POSTGRES_USER:-portfolio_user}:${POSTGRES_PASSWORD:-portfolio_password}@postgres:5432/${POSTGRES_DB:-portfolio_db}
+      DEBUG: "True"
+      SECRET_KEY: ${SECRET_KEY:-django-insecure-dev-only-not-for-production}
+      ALLOWED_HOSTS: backend,localhost,127.0.0.1
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: ${POSTGRES_DB:-portfolio_db}
+      POSTGRES_USER: ${POSTGRES_USER:-portfolio_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-portfolio_password}
       REDIS_URL: redis://redis:6379/0
-      CORS_ALLOWED_ORIGINS: http://localhost:${FRONTEND_PORT:-3000},${FRONTEND_URL:-}
-      CSRF_TRUSTED_ORIGINS: http://localhost:${FRONTEND_PORT:-3000},${FRONTEND_URL:-}
+      CORS_ALLOWED_ORIGINS: http://localhost:${FRONTEND_PORT:-3000}
+      CSRF_TRUSTED_ORIGINS: http://localhost:${FRONTEND_PORT:-3000}
     depends_on:
       - postgres
       - redis
     ports:
       - "${BACKEND_PORT:-8000}:8000"
-    volumes:
-      - backend_static:/app/staticfiles
-      - backend_media:/app/media
-      - backend_logs:/app/logs
     networks:
       - app_network
 
-  # ── Next.js Frontend ────────────────────────────────────────────────────────
+  # ── Next.js Frontend (npm run dev) ───────────────────────────────────────────
   frontend:
     build:
       context: .
-      dockerfile: Dockerfile
-      args:
-        # Server-side fetch target (container-to-container, internal network)
-        API_URL: http://backend:8000
-        # Client-side fetch target (browser → published backend port)
-        NEXT_PUBLIC_API_URL: http://localhost:${BACKEND_PORT:-8000}
-        NEXT_PUBLIC_SITE_URL: ${FRONTEND_URL:-http://localhost:3000}
+      dockerfile: Dockerfile.dev
     restart: unless-stopped
+    volumes:
+      - ./:/app                        # bind mount — changes reflect instantly
+      - /app/node_modules              # isolate container node_modules from host
+      - /app/.next                     # isolate Next.js build cache
     environment:
       API_URL: http://backend:8000
       NEXT_PUBLIC_API_URL: http://localhost:${BACKEND_PORT:-8000}
-      NEXT_PUBLIC_SITE_URL: ${FRONTEND_URL:-http://localhost:3000}
+      NEXT_PUBLIC_SITE_URL: http://localhost:${FRONTEND_PORT:-3000}
+      WATCHPACK_POLLING: "true"        # reliable HMR inside Docker on Linux
     depends_on:
       - backend
     ports:
@@ -79,6 +84,3 @@ networks:
 volumes:
   postgres_data:
   redis_data:
-  backend_static:
-  backend_media:
-  backend_logs:

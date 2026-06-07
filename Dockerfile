@@ -27,7 +27,10 @@ ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
 ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN npm run build
+# Force webpack — Turbopack is the default in Next.js 16 but @vercel/turbopack-next
+# is not served by the npm mirror. Note: TURBOPACK=0 does NOT disable it (any non-empty
+# string is truthy in JS and enables Turbopack). The only reliable flag is --webpack.
+RUN npx next build --webpack
 
 # ── Stage 3: production runner ────────────────────────────────────────────────
 FROM node:20-alpine AS runner
