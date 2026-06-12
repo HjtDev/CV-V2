@@ -4,11 +4,13 @@ export const en = {
     experience: "Experience",
     work: "Work",
     contact: "Let's Talk",
+    cv: "CV"
   },
   hero: {
     badge: "CRAFTING EXCELLENCE",
     heading: "Building websites that work as hard as you do.",
     cta: "Explore My Work",
+    viewCv: "View CV",
   },
   about: {
     badge: "ABOUT ME",
@@ -141,11 +143,117 @@ export const en = {
     emailPlaceholder: "Your Email",
     messagePlaceholder: "Your Message",
     submit: "Send Message",
+    github: "Github",
+    linkedin: "LinkedIn",
+    telegram: "Telegram",
+    phone: "Phone"
   },
   footer: {
     copy: "© {year} Mohammad Hojjat Nikoobakht. All rights reserved.",
     github: "GitHub",
+    telegram: "Telegram",
     linkedin: "LinkedIn",
+  },
+  cv: {
+    navPortfolio: "Portfolio",
+    navContact: "Contact",
+    hero: {
+      badge: "FULL-STACK ENGINEER",
+      yearsLabel: "YRS EXPERIENCE",
+      yearsValue: "5",
+      headline: "Building the Web,\nPiece by Piece.",
+      body: "I am a professional web developer with over 5 years of experience specializing in backend development. My expertise lies in designing and developing dynamic websites and web applications using various databases and modern technologies. I am committed to staying updated with the evolving trends in the web technology industry.",
+      location: "Tehran · Isfahan · Remote",
+      status: "Open to Collaboration",
+      viewWork: "View Portfolio",
+      contact: "Get in Touch",
+    },
+    education: {
+      badge: "ACADEMIC PATH",
+      heading: "Where It Started.",
+      items: [
+        {
+          period: "2021 — 2024",
+          degree: "Technical & Vocational Diploma",
+          school: "Chamran Technical Vocational School",
+          detail: "Graduated with GPA 19.23 / 20.",
+        },
+        {
+          period: "2021 — 2023",
+          degree: "Self-Taught: Django & Full-Stack Web",
+          school: "Independent Study",
+          detail: "Dived deep into Python, Django, React, and REST APIs — building real projects from scratch alongside school.",
+        },
+        {
+          period: "2024",
+          degree: "National Entrance Exam · Electrotechnics",
+          school: "Rank 65 nationally",
+          detail: "Top-65 nationally in one of the most competitive technical tracks.",
+        },
+        {
+          period: "2022 — Present",
+          degree: "Freelance Full-Stack Developer",
+          school: "Self-Employed · Remote",
+          detail: "Designing and shipping complete web applications for real clients — architecture, backend, UI, and deployment.",
+        },
+        {
+          period: "2024 — Present",
+          degree: "Bachelor's in Progress",
+          school: "National University of Skills, Tehran",
+          detail: "Currently enrolled alongside active freelance practice.",
+        },
+      ],
+    },
+    experience: {
+      badge: "WORK HISTORY",
+      heading: "One Method: Ship.",
+      freelanceTitle: "Independent Full-Stack Developer",
+      freelancePeriod: "2020 — Present",
+      body: "Every project earned. Every client served. I've handled the full stack independently — from architecture and design to deployment and post-launch support.",
+      highlights: [
+        "End-to-end application architecture (Django + Next.js)",
+        "Client communication & requirement engineering",
+        "Containerised deployment with Docker & Nginx",
+        "AI-assisted development workflows",
+      ],
+      seeProjects: "See My Projects",
+      remote: "REMOTE - WORLDWIDE"
+    },
+    skills: {
+      badge: "CAPABILITIES",
+      heading: "The Full Stack.",
+      categories: [
+        {
+          name: "Backend",
+          tags: ["Python", "Django", "DRF", "PostgreSQL", "Redis", "REST API", "JWT", "Gunicorn"],
+        },
+        {
+          name: "Frontend",
+          tags: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Framer Motion"],
+        },
+        {
+          name: "AI & Automation",
+          tags: ["LLM Integration", "Prompt Engineering", "AI Dev Workflows", "API Integration"],
+        },
+        {
+          name: "DevOps",
+          tags: ["Docker", "Nginx", "Linux", "Git", "GitHub", "CI/CD"],
+        },
+      ],
+    },
+    contact: {
+      badge: "GET IN TOUCH",
+      heading: "Let's Build Something.",
+      body: "Available for freelance projects, long-term collaboration, and remote positions worldwide.",
+      emailLabel: "EMAIL",
+      telegramLabel: "TELEGRAM",
+      phoneLabel: "PHONE",
+      phoneNumber: "+98 938 596 5775",
+      locationLabel: "LOCATION",
+      locationValue: "Tehran · Isfahan · Remote",
+      cta: "Send a Message",
+      backToPortfolio: "View Full Portfolio →",
+    },
   },
 };
 

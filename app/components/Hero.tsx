@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 import OrbField, { ORBS_HERO } from './interactive/OrbField';
 
@@ -67,11 +68,13 @@ export default function Hero() {
           {t.about.name} — {t.contact.role}
         </motion.p>
 
-        {/* Magnetic CTA */}
+        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.38, ease }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          dir="ltr"
         >
           <motion.button
             onClick={() => scrollTo('work')}
@@ -92,6 +95,16 @@ export default function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </motion.svg>
           </motion.button>
+
+          <Link
+            href="/cv"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/15 label text-on-surface-muted hover:text-primary hover:border-primary/30 transition-all duration-200"
+          >
+            {t.hero.viewCv}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
         </motion.div>
       </div>
 

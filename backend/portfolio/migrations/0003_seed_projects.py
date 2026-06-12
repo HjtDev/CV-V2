@@ -19,8 +19,8 @@ def seed_projects(apps, schema_editor):
                 'دارای سیستم پلاگین، ویرایشگرهای پیشرفته مدیریتی، لایه‌های چندگانه کش '
                 'و سیستم مدیریت محتوای کاملاً قابل تنظیم.'
             ),
-            url='',
-            github_url='',
+            url='https://exirequran.ir',
+            github_url='https://github.com/HjtDev/Rattel',
             tags=['Django', 'Next.js', 'PostgreSQL', 'Redis', 'Celery', 'Docker'],
             status='active',
             order=1,
@@ -40,8 +40,8 @@ def seed_projects(apps, schema_editor):
                 'فیلترینگ پیشرفته، جستجوی متنی، پنل CMS، وبلاگ با ویرایشگر متن غنی '
                 'و موتور پیشنهاد محتوای پیشرفته.'
             ),
-            url='',
-            github_url='',
+            url='https://zekremobin.ir',
+            github_url='https://github.com/HjtDev/ZekrMobin',
             tags=['Django', 'React', 'PostgreSQL', 'Redis'],
             status='active',
             order=2,

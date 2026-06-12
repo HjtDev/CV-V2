@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { Reveal } from './motion/Reveal';
 import CursorSpotlight from './interactive/CursorSpotlight';
+import { SiGithub, SiTelegram } from 'react-icons/si';
+import { FaLinkedinIn, FaPhone } from 'react-icons/fa';
 import { api } from '../lib/api';
 import type { SiteStatus } from '../lib/types';
 
@@ -138,11 +140,13 @@ export default function Contact({ siteStatus }: Props) {
                 </motion.div>
               ))}
 
-              <div className="flex gap-3 pt-2">
-                {[
-                  { icon: '🐙', label: 'GitHub',   href: 'https://github.com/HjtDev' },
-                  { icon: '💼', label: 'LinkedIn',  href: 'https://www.linkedin.com/in/mohammad-hojjat-nikoobakht-807aaa301?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
-                ].map(({ icon, label, href }) => (
+              <div className="flex flex-wrap gap-3 pt-2">
+                {([
+                  { Icon: SiGithub,   label: c.github,   href: 'https://github.com/HjtDev' },
+                  { Icon: FaLinkedinIn, label: c.linkedin,  href: 'https://www.linkedin.com/in/mohammad-hojjat-nikoobakht-807aaa301?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
+                  { Icon: SiTelegram, label: c.telegram,  href: 'https://t.me/HjtDev' },
+                  { Icon: FaPhone,    label: c.phone,     href: 'tel:+989385965775' },
+                ] as const).map(({ Icon, label, href }) => (
                   <motion.a
                     key={label}
                     href={href}
@@ -152,7 +156,7 @@ export default function Contact({ siteStatus }: Props) {
                     whileHover={{ y: -3, borderColor: 'rgba(0,255,194,0.3)', color: '#00ffc2' }}
                     transition={{ type: 'spring', stiffness: 400, damping: 22 }}
                   >
-                    <span>{icon}</span> {label}
+                    <Icon className="w-3.5 h-3.5" aria-hidden="true" /> {label}
                   </motion.a>
                 ))}
               </div>

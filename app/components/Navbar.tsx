@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 import LogoIcon from './LogoIcon';
 
@@ -60,6 +61,13 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
+          <Link
+            href="/cv"
+            className="label text-on-surface-muted hover:text-primary transition-colors relative group"
+          >
+            {t.nav.cv}
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -103,9 +111,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — solid bg so it's readable over any content */}
       {mobileOpen && (
-        <div className="md:hidden glass-strong border-t border-white/5 mt-3 mx-4 rounded-xl overflow-hidden">
+        <div className="md:hidden border border-white/8 mt-3 mx-4 rounded-xl overflow-hidden shadow-2xl" style={{ background: '#131313' }}>
           {navLinks.map(({ label, id }) => (
             <button
               key={id}
@@ -115,6 +123,13 @@ export default function Navbar() {
               {label}
             </button>
           ))}
+          <Link
+            href="/cv"
+            onClick={() => setMobileOpen(false)}
+            className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors"
+          >
+            {t.nav.cv}
+          </Link>
         </div>
       )}
     </header>

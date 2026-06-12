@@ -4,7 +4,13 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
-const SECTIONS = [
+export interface SidebarSection {
+  id: string;
+  labelEn: string;
+  labelFa: string;
+}
+
+const DEFAULT_SECTIONS: SidebarSection[] = [
   { id: 'hero',        labelEn: 'Home',        labelFa: 'خانه' },
   { id: 'foundations', labelEn: 'Foundations',  labelFa: 'زیرساخت' },
   { id: 'experience',  labelEn: 'Experience',   labelFa: 'تجربه' },
@@ -12,28 +18,28 @@ const SECTIONS = [
   { id: 'contact',     labelEn: 'Contact',      labelFa: 'تماس' },
 ];
 
-export default function SidebarNav() {
+export default function SidebarNav({ sections = DEFAULT_SECTIONS }: { sections?: SidebarSection[] }) {
   const { lang, dir } = useLanguage();
   const [visible, setVisible]               = useState(false);
   const [active, setActive]                 = useState('hero');
   const [hovered, setHovered]               = useState<string | null>(null);
 
-  // Show only after scrolling past the hero
+  // Show only after scrolling past the first section
   useEffect(() => {
-    const hero = document.getElementById('hero');
-    if (!hero) return;
+    const first = document.getElementById(sections[0]?.id ?? 'hero');
+    if (!first) return;
     const io = new IntersectionObserver(
       ([e]) => setVisible(!e.isIntersecting),
       { threshold: 0.15 },
     );
-    io.observe(hero);
+    io.observe(first);
     return () => io.disconnect();
-  }, []);
+  }, [sections]);
 
   // Track which section is in view
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
-    SECTIONS.forEach(({ id }) => {
+    sections.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (!el) return;
       const io = new IntersectionObserver(
@@ -44,7 +50,7 @@ export default function SidebarNav() {
       observers.push(io);
     });
     return () => observers.forEach(o => o.disconnect());
-  }, []);
+  }, [sections]);
 
   const isRtl = dir === 'rtl';
   const xOffset = isRtl ? 16 : -16;
@@ -75,7 +81,7 @@ export default function SidebarNav() {
             }}
           />
 
-          {SECTIONS.map(({ id, labelEn, labelFa }) => {
+          {sections.map(({ id, labelEn, labelFa }) => {
             const isActive = active === id;
             const label    = lang === 'fa' ? labelFa : labelEn;
 

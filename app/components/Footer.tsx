@@ -1,6 +1,8 @@
 'use client';
 
 import { useLanguage } from '../context/LanguageContext';
+import { SiGithub, SiTelegram } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 const Logo = () => (
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -35,24 +37,23 @@ export default function Footer() {
           </div>
           <span className="label text-on-surface-muted text-[11px]">{f.copy.replace('{year}', String(year))}</span>
         </div>
-        <div className="flex items-center gap-4">
-          <a
-            href="https://github.com/HjtDev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="label text-on-surface-muted text-[11px] hover:text-primary transition-colors"
-          >
-            {f.github}
-          </a>
-          <span className="text-outline/40">·</span>
-          <a
-            href="https://www.linkedin.com/in/mohammad-hojjat-nikoobakht-807aaa301?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="label text-on-surface-muted text-[11px] hover:text-primary transition-colors"
-          >
-            {f.linkedin}
-          </a>
+        <div className="flex items-center gap-5">
+          {([
+            { Icon: SiGithub,   label: f.github,   href: 'https://github.com/HjtDev' },
+            { Icon: SiTelegram, label: f.telegram,  href: 'https://t.me/HjtDev' },
+            { Icon: FaLinkedinIn, label: f.linkedin,  href: 'https://www.linkedin.com/in/mohammad-hojjat-nikoobakht-807aaa301?utm_source=share_via&utm_content=profile&utm_medium=member_android' },
+          ] as const).map(({ Icon, label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-on-surface-muted hover:text-primary transition-colors"
+            >
+              <Icon className="w-4 h-4" aria-hidden="true" />
+            </a>
+          ))}
         </div>
       </div>
     </footer>

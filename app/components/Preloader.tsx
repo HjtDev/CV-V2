@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 
 // M and N in primary green, H in muted — creates visual rhythm without noise
@@ -18,20 +19,25 @@ const letterVariants = {
 
 export function Preloader() {
   const prefersReduced = useReducedMotion();
+  const pathname = usePathname();
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    // Re-show on every route change (first load + every navigation)
+    setVisible(true);
     document.body.style.overflow = 'hidden';
+
     const delay = prefersReduced === true ? 200 : 1700;
     const t = setTimeout(() => {
       document.body.style.overflow = '';
       setVisible(false);
     }, delay);
+
     return () => {
       clearTimeout(t);
       document.body.style.overflow = '';
     };
-  }, [prefersReduced]);
+  }, [pathname, prefersReduced]);
 
   return (
     <AnimatePresence>
@@ -42,12 +48,11 @@ export function Preloader() {
           exit={
             prefersReduced === true
               ? { opacity: 0, transition: { duration: 0.15 } }
-              // Curtain lifts: decisive ease-in-out, no bounce (Jakub production default)
               : { y: '-100%', transition: { duration: 0.65, ease: [0.76, 0, 0.24, 1] } }
           }
         >
           {/* Initials stagger — Jakub's enter recipe */}
-          <div className="flex items-baseline gap-1" aria-hidden="true">
+          <div className="flex items-baseline gap-1" dir="ltr" aria-hidden="true">
             {LETTERS.map(({ char, color }, i) => (
               <motion.span
                 key={char}

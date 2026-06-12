@@ -17,6 +17,12 @@ services:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - app_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-portfolio_user} -d ${POSTGRES_DB:-portfolio_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
 
   # ── Redis ───────────────────────────────────────────────────────────────────
   redis:
@@ -51,8 +57,10 @@ services:
       # nginx terminates SSL; Django must not redirect internal HTTP traffic to HTTPS
       SECURE_SSL_REDIRECT: "False"
     depends_on:
-      - postgres
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
     ports:
       - "${BACKEND_PORT:-8000}:8000"
     volumes:
