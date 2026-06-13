@@ -77,11 +77,47 @@ services:
       API_URL: http://backend:8000
       NEXT_PUBLIC_API_URL: http://localhost:${BACKEND_PORT:-8000}
       NEXT_PUBLIC_SITE_URL: http://localhost:${FRONTEND_PORT:-3000}
+      NEXT_PUBLIC_UMAMI_SCRIPT_URL: ${NEXT_PUBLIC_UMAMI_SCRIPT_URL:-http://localhost:3001/script.js}
+      NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${NEXT_PUBLIC_UMAMI_WEBSITE_ID:-}
       WATCHPACK_POLLING: "true"        # reliable HMR inside Docker on Linux
     depends_on:
       - backend
     ports:
       - "${FRONTEND_PORT:-3000}:3000"
+    networks:
+      - app_network
+
+  # ── Umami Analytics DB ───────────────────────────────────────────────────────
+  umami_db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: ${UMAMI_DB_PASSWORD:-umami_dev_password}
+    volumes:
+      - umami_db_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U umami -d umami"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  # ── Umami Analytics ──────────────────────────────────────────────────────────
+  umami:
+    image: umamisoftware/umami:postgresql-latest
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD:-umami_dev_password}@umami_db:5432/umami
+      APP_SECRET: ${UMAMI_APP_SECRET:-change-me-umami-dev-secret}
+    depends_on:
+      umami_db:
+        condition: service_healthy
+    ports:
+      - "${UMAMI_PORT:-3001}:3000"
     networks:
       - app_network
 
@@ -92,3 +128,4 @@ networks:
 volumes:
   postgres_data:
   redis_data:
+  umami_db_data:

@@ -79,6 +79,8 @@ services:
         API_URL: http://backend:8000
         NEXT_PUBLIC_API_URL: https://${DOMAIN}
         NEXT_PUBLIC_SITE_URL: ${FRONTEND_URL}
+        NEXT_PUBLIC_UMAMI_SCRIPT_URL: ${NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+        NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${NEXT_PUBLIC_UMAMI_WEBSITE_ID:-}
     container_name: resume_frontend
     restart: unless-stopped
     environment:
@@ -88,6 +90,42 @@ services:
       - backend
     ports:
       - "${FRONTEND_PORT:-3000}:3000"
+    networks:
+      - app_network
+
+  # ── Umami Analytics DB ───────────────────────────────────────────────────────
+  umami_db:
+    image: postgres:15-alpine
+    container_name: resume_umami_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: ${UMAMI_DB_PASSWORD}
+    volumes:
+      - umami_db_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U umami -d umami"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  # ── Umami Analytics ──────────────────────────────────────────────────────────
+  umami:
+    image: umamisoftware/umami:postgresql-latest
+    container_name: resume_umami
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD}@umami_db:5432/umami
+      APP_SECRET: ${UMAMI_APP_SECRET}
+    depends_on:
+      umami_db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${UMAMI_PORT:-3001}:3000"
     networks:
       - app_network
 
@@ -101,3 +139,4 @@ volumes:
   backend_static:
   backend_media:
   backend_logs:
+  umami_db_data:

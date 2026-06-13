@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { cookies, headers } from "next/headers";
+import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "./context/LanguageContext";
 import type { Lang } from "./context/LanguageContext";
@@ -210,6 +211,14 @@ export default async function RootLayout({
       <body>
         <Preloader />
         <LanguageProvider initialLang={initialLang}>{children}</LanguageProvider>
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            async
+            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );
