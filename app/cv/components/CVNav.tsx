@@ -43,6 +43,20 @@ export default function CVNav() {
         </nav>
 
         <div className="flex items-center gap-3">
+          {/* Download PDF */}
+          <a
+            href="/resume.pdf"
+            download="MHN-Resume.pdf"
+            className="hidden md:flex items-center gap-2 glass px-4 py-1.5 rounded-full label text-on-surface-muted hover:text-primary hover:border-primary/30 border border-white/10 transition-all duration-200"
+            aria-label="Download resume PDF"
+          >
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+              <path d="M6.5 1v7.5M6.5 8.5l-2.5-2.5M6.5 8.5l2.5-2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M1 10.5h11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+            </svg>
+            PDF
+          </a>
+
           {/* Language switcher */}
           <div className="glass flex items-center gap-0.5 px-3 py-1.5 rounded-full">
             {(['en', 'fa'] as const).map((l, i) => (
@@ -83,11 +97,23 @@ export default function CVNav() {
               key={href}
               href={href}
               onClick={() => setMobileOpen(false)}
-              className={`block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors ${i < navLinks.length - 1 ? 'border-b border-white/5' : ''}`}
+              className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5"
             >
               {label}
             </Link>
           ))}
+          <a
+            href="/resume.pdf"
+            download="MHN-Resume.pdf"
+            className="flex items-center gap-2 px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+              <path d="M6.5 1v7.5M6.5 8.5l-2.5-2.5M6.5 8.5l2.5-2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M1 10.5h11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+            </svg>
+            {t.cv.hero.downloadPdf}
+          </a>
         </div>
       )}
     </header>

@@ -160,13 +160,14 @@ export const en = {
     hero: {
       badge: "FULL-STACK ENGINEER",
       yearsLabel: "YRS EXPERIENCE",
-      yearsValue: "5",
+      yearsValue: "+5",
       headline: "Building the Web,\nPiece by Piece.",
       body: "I am a professional web developer with over 5 years of experience specializing in backend development. My expertise lies in designing and developing dynamic websites and web applications using various databases and modern technologies. I am committed to staying updated with the evolving trends in the web technology industry.",
       location: "Tehran · Isfahan · Remote",
       status: "Open to Collaboration",
       viewWork: "View Portfolio",
       contact: "Get in Touch",
+      downloadPdf: "Download PDF",
     },
     education: {
       badge: "ACADEMIC PATH",

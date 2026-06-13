@@ -138,6 +138,17 @@ export default function CVHero({ siteStatus }: Props) {
                 {cv.contact}
               </Link>
             </motion.div>
+            <a
+              href="/resume.pdf"
+              download="MHN-Resume.pdf"
+              className="flex items-center gap-2 px-7 py-3 border border-white/10 glass label text-on-surface-muted rounded-xl hover:text-on-surface hover:border-white/25 active:scale-[0.97] transition-all duration-200"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M7 1v8M7 9l-3-3M7 9l3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M1 11h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+              {cv.downloadPdf}
+            </a>
           </motion.div>
         </motion.div>
 
@@ -166,10 +177,10 @@ export default function CVHero({ siteStatus }: Props) {
               transition={{ type: 'spring', duration: 0.55, bounce: 0, delay: 0.5 }}
               style={prefersReduced ? {} : { animation: 'cvfloat 4s ease-in-out infinite' }}
             >
-              <p className="label text-outline text-primary text-[10px] uppercase mb-1">{cv.yearsLabel}</p>
-              <p className="font-bold text-2xl text-primary leading-none" style={{ fontVariantNumeric: 'tabular-nums' }} dir="ltr">
+              <p className={`font-bold text-2xl text-primary leading-none ${lang == 'fa' ? "text-center" : ""}`} style={{ fontVariantNumeric: 'tabular-nums' }} dir="ltr">
                 {cv.yearsValue}
               </p>
+              <p className="label text-outline text-primary text-[10px] uppercase mb-1">{cv.yearsLabel}</p>
             </motion.div>
           </div>
         </motion.div>
