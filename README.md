@@ -2,6 +2,10 @@
 
 A bilingual (English / Farsi) personal portfolio and CV site built with Next.js 16, Django 5, and Docker.
 
+## See the Project Live
+
+[mhnikoobakht.ir](https://mhnikoobakht.ir)
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -12,6 +16,7 @@ A bilingual (English / Farsi) personal portfolio and CV site built with Next.js 
 | Backend | Django 5 + Django REST Framework, Gunicorn |
 | Database | PostgreSQL 16 |
 | Cache | Redis 7 |
+| Analytics | Umami (self-hosted, privacy-first) |
 | Containerisation | Docker + Docker Compose (dev & prod profiles) |
 | Deployment | SSH + rsync via `deploy/deploy-prod.sh` |
 
@@ -25,15 +30,17 @@ resume-site/
 │   ├── context/            # LanguageContext (EN / FA, RTL toggle)
 │   ├── translations/       # en.ts + fa.ts — full bilingual string maps
 │   ├── lib/                # API client, types
-│   ├── layout.tsx          # Root layout with SEO metadata
+│   ├── layout.tsx          # Root layout with SEO metadata + Umami script
 │   ├── page.tsx            # Main portfolio page
-│   ├── sitemap.ts          # Dynamic sitemap
+│   ├── sitemap.ts          # Dynamic sitemap (/, /cv, /resume.pdf)
 │   └── robots.ts           # robots.txt
 ├── backend/                # Django project
 │   ├── contact/            # Contact form API
 │   ├── portfolio/          # Projects & site-status API
 │   └── core/               # Settings, URLs
 ├── deploy/                 # Prod deploy helpers (SSH + rsync script, env example)
+├── public/
+│   └── resume.pdf          # Downloadable PDF resume
 ├── docker-compose.yml      # Development stack
 ├── docker-compose.prod.yml # Production stack
 ├── Dockerfile              # Production frontend image
@@ -53,13 +60,13 @@ resume-site/
 # 1. Copy the environment template
 cp .env.example .env
 
-# 2. Start the full stack (Postgres + Redis + Django + Next.js)
+# 2. Start the full stack (Postgres + Redis + Django + Next.js + Umami)
 docker compose up --build
 ```
 
-The frontend is available at `http://localhost:3000` and the Django API at `http://localhost:8000`.
+The frontend is available at `http://localhost:3000`, the Django API at `http://localhost:8000`, and the Umami dashboard at `http://localhost:3001`.
 
-Hot reload is enabled for both services via bind-mounted source directories.
+Hot reload is enabled for both frontend and backend services via bind-mounted source directories.
 
 ### Running without Docker
 
@@ -87,6 +94,32 @@ python manage.py runserver
 | `POSTGRES_PASSWORD` | — | Database password (required in prod) |
 | `SECRET_KEY` | — | Django secret key (required in prod) |
 | `REDIS_URL` | `redis://redis:6379/0` | Redis connection URL |
+| `UMAMI_DB_PASSWORD` | — | Password for the Umami PostgreSQL database |
+| `UMAMI_APP_SECRET` | — | Secret key for Umami session signing (min 32 chars in prod) |
+| `UMAMI_PORT` | `3001` | Host port Umami dashboard is exposed on |
+| `NEXT_PUBLIC_UMAMI_SCRIPT_URL` | — | URL of the Umami tracking script (baked in at build time) |
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | — | Website ID from Umami dashboard (baked in at build time) |
+
+## Analytics Setup (Umami)
+
+Umami runs as a separate service alongside the main stack. First-time setup:
+
+1. Start the stack — Umami is available at `http://localhost:3001` (dev) or `https://analytics.mhnikoobakht.ir` (prod)
+2. Log in with the default credentials: `admin` / `umami` — **change the password immediately**
+3. Go to **Settings → Websites → Add website**, enter your domain, and copy the **Website ID**
+4. Set `NEXT_PUBLIC_UMAMI_WEBSITE_ID` in `.env` (dev) or `.env.prod` (prod)
+5. Rebuild the frontend — the tracking script is baked in at build time:
+   ```bash
+   # dev
+   docker compose up --build frontend
+
+   # prod
+   docker compose -f docker-compose.prod.yml --env-file .env.prod up -d --build frontend
+   ```
+
+The tracking script only loads when `NEXT_PUBLIC_UMAMI_WEBSITE_ID` is set, so the site works fine before setup.
+
+> **Note:** During `next build`, server-side API calls to `backend` will log `ENOTFOUND` errors — this is expected. The build container has no network access to other services; everything resolves correctly at runtime.
 
 ## Production Deployment
 
@@ -101,16 +134,18 @@ cp deploy/deploy.prod.env.example deploy/deploy.prod.env
 ./deploy/deploy-prod.sh --follow
 ```
 
-The production build uses `output: 'standalone'` for a minimal Docker image footprint.
+The production build uses `output: 'standalone'` for a minimal Docker image footprint. Umami is bound to `127.0.0.1:3001` in production and proxied through nginx at `analytics.mhnikoobakht.ir`.
 
 ## Key Features
 
 - **Bilingual** — full EN / FA translations with automatic RTL layout (`dir="rtl"` on `<html>`) when Farsi is active
 - **CV page** (`/cv`) — dedicated resume page with scroll-driven timeline animations, animated year counter, and skills grid
+- **PDF resume** — downloadable at `/resume.pdf`, linked from the CV hero and navbar
 - **Live backend status** — hero availability badge fetches real-time status from the Django API
 - **Contact form** — messages posted to `/api/v1/contact/` and stored in the database
 - **Scroll-driven timeline** — education nodes glow one-by-one scrolling down, all at once scrolling up
 - **Interactive backgrounds** — mouse-repelling physics orbs (`OrbField`) and cursor spotlight effects
+- **Analytics** — self-hosted Umami tracking with no cookies and no third-party data sharing
 - **SEO** — per-page Open Graph, Twitter Card, hreflang alternates, canonical URLs, and sitemap
 
 ## Scripts
