@@ -26,21 +26,24 @@ A bilingual (English / Farsi) personal portfolio and CV site built with Next.js 
 resume-site/
 ├── app/                    # Next.js App Router
 │   ├── components/         # Shared UI components (Navbar, Hero, Contact, Footer…)
-│   ├── cv/                 # /cv page — CVHero, CVEducation, CVExperience, CVSkills, CVContact
+│   │   └── interactive/    # CursorSpotlight, OrbField, CircuitSVG animations
+│   ├── cv/                 # /cv page — full-stack developer resume
+│   ├── embedded/           # /embedded page — electrical engineering resume
+│   │   └── components/     # SystemsNav, SystemsHero, SystemsIoT, SystemsPLC
 │   ├── context/            # LanguageContext (EN / FA, RTL toggle)
 │   ├── translations/       # en.ts + fa.ts — full bilingual string maps
 │   ├── lib/                # API client, types
 │   ├── layout.tsx          # Root layout with SEO metadata + Umami script
 │   ├── page.tsx            # Main portfolio page
-│   ├── sitemap.ts          # Dynamic sitemap (/, /cv, /resume.pdf)
+│   ├── sitemap.ts          # Dynamic sitemap (/, /cv, /embedded, /resume.pdf)
 │   └── robots.ts           # robots.txt
 ├── backend/                # Django project
-│   ├── contact/            # Contact form API
+│   ├── contact/            # Contact form API (CBV, rate-limited at 3/hour)
 │   ├── portfolio/          # Projects & site-status API
 │   └── core/               # Settings, URLs
 ├── deploy/                 # Prod deploy helpers (SSH + rsync script, env example)
 ├── public/
-│   └── resume.pdf          # Downloadable PDF resume
+│   └── resume.pdf          # Downloadable PDF resume (web dev)
 ├── docker-compose.yml      # Development stack
 ├── docker-compose.prod.yml # Production stack
 ├── Dockerfile              # Production frontend image
@@ -139,12 +142,14 @@ The production build uses `output: 'standalone'` for a minimal Docker image foot
 ## Key Features
 
 - **Bilingual** — full EN / FA translations with automatic RTL layout (`dir="rtl"` on `<html>`) when Farsi is active
-- **CV page** (`/cv`) — dedicated resume page with scroll-driven timeline animations, animated year counter, and skills grid
-- **PDF resume** — downloadable at `/resume.pdf`, linked from the CV hero and navbar
+- **Three-page structure** — portfolio (`/`), full-stack CV (`/cv`), and electrical engineering resume (`/embedded`); all navbars cross-link
+- **Embedded systems page** (`/embedded`) — secondary resume covering PLC programming (Delta, Siemens LOGO!), microcontroller firmware (STM32, ESP32, Raspberry Pi, Arduino/AVR), IoT and industrial automation in C/C++ and MicroPython
+- **CV page** (`/cv`) — dedicated resume with scroll-driven timeline animations, animated year counter, and skills grid
+- **PDF resume** — downloadable at `/resume.pdf` (web development CV), linked from the CV page and navbar
 - **Live backend status** — hero availability badge fetches real-time status from the Django API
-- **Contact form** — messages posted to `/api/v1/contact/` and stored in the database
+- **Contact form** — rate-limited at 3 requests/hour per IP (DRF `ScopedRateThrottle` via CBV); 429 responses show an inline amber banner above the form so the user's typed content is preserved
 - **Scroll-driven timeline** — education nodes glow one-by-one scrolling down, all at once scrolling up
-- **Interactive backgrounds** — mouse-repelling physics orbs (`OrbField`) and cursor spotlight effects
+- **Interactive backgrounds** — mouse-repelling physics orbs (`OrbField`), cursor spotlight (`CursorSpotlight`), and animated PCB circuit traces (`CircuitSVG`)
 - **Analytics** — self-hosted Umami tracking with no cookies and no third-party data sharing
 - **SEO** — per-page Open Graph, Twitter Card, hreflang alternates, canonical URLs, and sitemap
 
