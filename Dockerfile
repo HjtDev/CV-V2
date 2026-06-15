@@ -1,17 +1,14 @@
 # ── Stage 1: install dependencies ────────────────────────────────────────────
-FROM node:20-alpine AS deps
+FROM node:22-alpine AS deps
 WORKDIR /app
 
-RUN npm config set registry https://npm.devneeds.ir
-
+COPY .npmrc ./
 COPY package.json package-lock.json ./
 RUN npm ci
 
 # ── Stage 2: build ────────────────────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
-
-RUN npm config set registry https://npm.devneeds.ir
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -31,13 +28,10 @@ ENV NEXT_PUBLIC_UMAMI_SCRIPT_URL=${NEXT_PUBLIC_UMAMI_SCRIPT_URL}
 ENV NEXT_PUBLIC_UMAMI_WEBSITE_ID=${NEXT_PUBLIC_UMAMI_WEBSITE_ID}
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Force webpack — Turbopack is the default in Next.js 16 but @vercel/turbopack-next
-# is not served by the npm mirror. Note: TURBOPACK=0 does NOT disable it (any non-empty
-# string is truthy in JS and enables Turbopack). The only reliable flag is --webpack.
-RUN npx next build --webpack
+RUN npx next build
 
 # ── Stage 3: production runner ────────────────────────────────────────────────
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
