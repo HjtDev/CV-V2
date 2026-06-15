@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '../../context/LanguageContext';
 import LogoIcon from '../../components/LogoIcon';
 
-export default function CVNav() {
+export default function SystemsNav() {
   const { t, lang, setLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,11 +16,12 @@ export default function CVNav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinks = [
-    { label: t.cv.navPortfolio, href: '/'        },
-    { label: t.nav.systems,     href: '/embedded' },
-    { label: t.cv.navContact,   href: '#contact' },
-  ];
+  const scrollTo = (id: string) => {
+    setMobileOpen(false);
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const s = t.systems;
 
   return (
     <header
@@ -29,35 +30,32 @@ export default function CVNav() {
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between gap-6">
+        {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group shrink-0" aria-label="Back to portfolio">
           <LogoIcon className="w-8 h-8 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(0,255,194,0.6)]" />
           <span className="label text-on-surface-muted group-hover:text-primary transition-colors">M.H.N</span>
         </Link>
 
+        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map(({ label, href }) => (
-            <Link key={href} href={href} className="label text-on-surface-muted hover:text-primary transition-colors relative group">
-              {label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
+          <Link href="/" className="label text-on-surface-muted hover:text-primary transition-colors relative group">
+            {s.navPortfolio}
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+          </Link>
+          <Link href="/cv" className="label text-on-surface-muted hover:text-primary transition-colors relative group">
+            {s.navCV}
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+          </Link>
+          <button
+            onClick={() => scrollTo('contact')}
+            className="label text-on-surface-muted hover:text-primary transition-colors relative group"
+          >
+            {s.navContact}
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+          </button>
         </nav>
 
         <div className="flex items-center gap-3">
-          {/* Download PDF */}
-          <a
-            href="/resume.pdf"
-            download="MHN-Resume.pdf"
-            className="hidden md:flex items-center gap-2 glass px-4 py-1.5 rounded-full label text-on-surface-muted hover:text-primary hover:border-primary/30 border border-white/10 transition-all duration-200"
-            aria-label="Download resume PDF"
-          >
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-              <path d="M6.5 1v7.5M6.5 8.5l-2.5-2.5M6.5 8.5l2.5-2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M1 10.5h11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-            </svg>
-            PDF
-          </a>
-
           {/* Language switcher */}
           <div className="glass flex items-center gap-0.5 px-3 py-1.5 rounded-full">
             {(['en', 'fa'] as const).map((l, i) => (
@@ -90,31 +88,21 @@ export default function CVNav() {
         </div>
       </div>
 
-      {/* Mobile menu — solid bg so it's readable over any content */}
+      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border border-white/8 mt-3 mx-4 rounded-xl overflow-hidden shadow-2xl" style={{ background: '#131313' }}>
-          {navLinks.map(({ label, href }, i) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setMobileOpen(false)}
-              className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5"
-            >
-              {label}
-            </Link>
-          ))}
-          <a
-            href="/resume.pdf"
-            download="MHN-Resume.pdf"
-            className="flex items-center gap-2 px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors"
-            onClick={() => setMobileOpen(false)}
-          >
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-              <path d="M6.5 1v7.5M6.5 8.5l-2.5-2.5M6.5 8.5l2.5-2.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M1 10.5h11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-            </svg>
-            {t.cv.hero.downloadPdf}
-          </a>
+          <Link href="/" onClick={() => setMobileOpen(false)}
+            className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5">
+            {s.navPortfolio}
+          </Link>
+          <Link href="/cv" onClick={() => setMobileOpen(false)}
+            className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5">
+            {s.navCV}
+          </Link>
+          <button onClick={() => scrollTo('contact')}
+            className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors">
+            {s.navContact}
+          </button>
         </div>
       )}
     </header>

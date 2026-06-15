@@ -68,6 +68,13 @@ export default function Navbar() {
             {t.nav.cv}
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
           </Link>
+          <Link
+            href="/embedded"
+            className="label text-on-surface-muted hover:text-primary transition-colors relative group"
+          >
+            {t.nav.systems}
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -126,9 +133,16 @@ export default function Navbar() {
           <Link
             href="/cv"
             onClick={() => setMobileOpen(false)}
-            className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors"
+            className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5"
           >
             {t.nav.cv}
+          </Link>
+          <Link
+            href="/embedded"
+            onClick={() => setMobileOpen(false)}
+            className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors"
+          >
+            {t.nav.systems}
           </Link>
         </div>
       )}

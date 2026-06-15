@@ -16,9 +16,10 @@ type Props = { siteStatus?: SiteStatus | null };
 export default function Contact({ siteStatus }: Props) {
   const { t, lang } = useLanguage();
   const c = t.contact;
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError]         = useState(false);
-  const [loading, setLoading]     = useState(false);
+  const [submitted, setSubmitted]     = useState(false);
+  const [error, setError]             = useState(false);
+  const [rateLimited, setRateLimited] = useState(false);
+  const [loading, setLoading]         = useState(false);
 
   const statusValue = siteStatus
     ? (lang === 'fa' ? siteStatus.status_text_fa : siteStatus.status_text)
@@ -41,16 +42,22 @@ export default function Contact({ siteStatus }: Props) {
       setSubmitted(true);
       form.reset();
       setTimeout(() => setSubmitted(false), 4000);
-    } catch {
-      setError(true);
-      setTimeout(() => setError(false), 4000);
+    } catch (err: unknown) {
+      const status = (err as { response?: { status?: number } })?.response?.status;
+      if (status === 429) {
+        setRateLimited(true);
+        setTimeout(() => setRateLimited(false), 60_000);
+      } else {
+        setError(true);
+        setTimeout(() => setError(false), 5000);
+      }
     } finally {
       setLoading(false);
     }
   };
 
   const inputClass =
-    'w-full glass px-4 py-3.5 rounded-xl text-on-surface placeholder-on-surface-muted outline-none bg-transparent text-sm transition-all duration-200 focus:border-primary/40';
+    'w-full glass px-4 py-3.5 rounded-xl text-on-surface placeholder-on-surface-muted outline-none bg-transparent text-sm';
 
   return (
     <section id="contact" className="relative overflow-hidden py-32 px-6">
@@ -119,6 +126,7 @@ export default function Contact({ siteStatus }: Props) {
                 <motion.div
                   key={label}
                   className="glass p-5 rounded-xl"
+                  style={{ borderColor: 'rgba(255,255,255,0.07)' }}
                   initial={{ opacity: 0, x: -16 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -153,6 +161,7 @@ export default function Contact({ siteStatus }: Props) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="glass px-5 py-3 rounded-xl label text-on-surface-muted text-[11px] flex items-center gap-2"
+                    style={{ borderColor: 'rgba(255,255,255,0.07)', color: '#83958c' }}
                     whileHover={{ y: -3, borderColor: 'rgba(0,255,194,0.3)', color: '#00ffc2' }}
                     transition={{ type: 'spring', stiffness: 400, damping: 22 }}
                   >
@@ -167,6 +176,7 @@ export default function Contact({ siteStatus }: Props) {
           <Reveal direction="right">
             <motion.div
               className="glass-strong p-8 rounded-2xl"
+              style={{ borderColor: 'rgba(255,255,255,0.1)' }}
               whileHover={{ borderColor: 'rgba(0,255,194,0.1)' }}
               transition={{ duration: 0.3 }}
             >
@@ -184,7 +194,10 @@ export default function Contact({ siteStatus }: Props) {
                         scale: 1,
                         boxShadow: ['0 0 0px rgba(0,255,194,0)', '0 0 32px rgba(0,255,194,0.3)', '0 0 0px rgba(0,255,194,0)'],
                       }}
-                      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                      transition={{
+                        scale: { type: 'spring', stiffness: 300, damping: 20 },
+                        boxShadow: { duration: 1.4, repeat: Infinity, ease: 'easeInOut' },
+                      }}
                     >
                       ✓
                     </motion.div>
@@ -194,37 +207,32 @@ export default function Contact({ siteStatus }: Props) {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 }}
                     >
-                      MESSAGE_SENT
-                    </motion.p>
-                  </div>
-                ) : error ? (
-                  <div className="flex flex-col items-center justify-center py-12 gap-4">
-                    <motion.div
-                      className="w-14 h-14 rounded-full flex items-center justify-center text-2xl"
-                      style={{ background: 'rgba(255,68,68,0.1)' }}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                    >
-                      ✕
-                    </motion.div>
-                    <motion.p
-                      className="label text-[11px] text-on-surface-muted"
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      {lang === 'fa' ? 'خطا در ارسال. لطفاً دوباره تلاش کنید.' : 'Send failed. Please try again.'}
+                      {c.sent}
                     </motion.p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
+                    {(error || rateLimited) && (
+                      <motion.div
+                        className="flex items-center gap-3 px-4 py-3 rounded-xl"
+                        style={{ background: rateLimited ? 'rgba(255,170,0,0.08)' : 'rgba(255,68,68,0.08)', border: `1px solid ${rateLimited ? 'rgba(255,170,0,0.2)' : 'rgba(255,68,68,0.2)'}` }}
+                        initial={{ opacity: 0, y: -6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <span className="text-base">{rateLimited ? '⏱' : '✕'}</span>
+                        <p className="label text-[11px]" style={{ color: rateLimited ? '#ffaa00' : '#ff4444' }}>
+                          {rateLimited ? c.rateLimited : c.sendError}
+                        </p>
+                      </motion.div>
+                    )}
                     <motion.input
                       name="name"
                       type="text"
                       required
                       placeholder={c.namePlaceholder}
                       className={inputClass}
+                      style={{ borderColor: 'rgba(255,255,255,0.07)' }}
                       whileFocus={{ borderColor: 'rgba(0,255,194,0.4)', boxShadow: '0 0 0 1px rgba(0,255,194,0.15)' }}
                     />
                     <motion.input
@@ -233,6 +241,7 @@ export default function Contact({ siteStatus }: Props) {
                       required
                       placeholder={c.emailPlaceholder}
                       className={inputClass}
+                      style={{ borderColor: 'rgba(255,255,255,0.07)' }}
                       whileFocus={{ borderColor: 'rgba(0,255,194,0.4)', boxShadow: '0 0 0 1px rgba(0,255,194,0.15)' }}
                     />
                     <motion.textarea
@@ -241,11 +250,12 @@ export default function Contact({ siteStatus }: Props) {
                       rows={5}
                       placeholder={c.messagePlaceholder}
                       className={`${inputClass} resize-none`}
+                      style={{ borderColor: 'rgba(255,255,255,0.07)' }}
                       whileFocus={{ borderColor: 'rgba(0,255,194,0.4)', boxShadow: '0 0 0 1px rgba(0,255,194,0.15)' }}
                     />
                     <motion.button
                       type="submit"
-                      disabled={loading}
+                      disabled={loading || rateLimited}
                       className="w-full py-4 rounded-xl label text-sm font-semibold text-surface disabled:opacity-60"
                       style={{ background: 'linear-gradient(135deg, #00ffc2, #00e1ab)' }}
                       whileHover={loading ? {} : { scale: 1.02, boxShadow: '0 0 24px rgba(0,255,194,0.35)' }}
