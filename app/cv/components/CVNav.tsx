@@ -25,7 +25,7 @@ export default function CVNav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'glass border-b border-white/5 py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-[#131313]/90 backdrop-blur-md border-b border-white/5 py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between gap-6">
@@ -65,7 +65,7 @@ export default function CVNav() {
                 {i > 0 && <span className="text-outline/60 text-xs">|</span>}
                 <button
                   onClick={() => setLang(l)}
-                  className={`label px-2 py-0.5 rounded-full transition-all duration-200 ${
+                  className={`label px-2 py-0.5 rounded-full transition-all duration-200 cursor-pointer ${
                     lang === l ? 'text-primary bg-primary/10' : 'text-on-surface-muted hover:text-on-surface'
                   }`}
                 >
@@ -77,7 +77,7 @@ export default function CVNav() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden glass p-2 rounded-lg"
+            className="md:hidden glass p-2 rounded-lg cursor-pointer"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >

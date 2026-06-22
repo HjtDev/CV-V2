@@ -32,7 +32,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'glass border-b border-white/5 py-3'
+          ? 'bg-[#131313]/90 backdrop-blur-md border-b border-white/5 py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* Logo */}
         <button
           onClick={() => scrollTo('hero')}
-          className="flex items-center gap-3 group shrink-0"
+          className="flex items-center gap-3 group shrink-0 cursor-pointer"
           aria-label="Go to top"
         >
           <LogoIcon className="w-8 h-8 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(0,255,194,0.6)]" />
@@ -55,7 +55,7 @@ export default function Navbar() {
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className="label text-on-surface-muted hover:text-primary transition-colors relative group"
+              className="label text-on-surface-muted hover:text-primary transition-colors relative group cursor-pointer"
             >
               {label}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
@@ -82,7 +82,7 @@ export default function Navbar() {
           <div className="glass flex items-center gap-0.5 px-3 py-1.5 rounded-full">
             <button
               onClick={() => setLang('en')}
-              className={`label px-2 py-0.5 rounded-full transition-all duration-200 ${
+              className={`label px-2 py-0.5 rounded-full transition-all duration-200 cursor-pointer ${
                 lang === 'en'
                   ? 'text-primary bg-primary/10'
                   : 'text-on-surface-muted hover:text-on-surface'
@@ -93,7 +93,7 @@ export default function Navbar() {
             <span className="text-outline/60 text-xs">|</span>
             <button
               onClick={() => setLang('fa')}
-              className={`label px-2 py-0.5 rounded-full transition-all duration-200 ${
+              className={`label px-2 py-0.5 rounded-full transition-all duration-200 cursor-pointer ${
                 lang === 'fa'
                   ? 'text-primary bg-primary/10'
                   : 'text-on-surface-muted hover:text-on-surface'
@@ -105,7 +105,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden glass p-2 rounded-lg"
+            className="md:hidden glass p-2 rounded-lg cursor-pointer"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -125,7 +125,7 @@ export default function Navbar() {
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+              className="block w-full text-start px-6 py-4 label text-on-surface-muted hover:text-primary hover:bg-white/5 transition-colors border-b border-white/5 last:border-0 cursor-pointer"
             >
               {label}
             </button>
